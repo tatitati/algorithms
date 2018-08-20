@@ -1,6 +1,6 @@
 ## Sort
 - [x]  Insertion sort
-- [ ]  Selection sort
+- [x]  Selection sort
 - [ ]  Heap sort
 - [ ]  Quick sort
 - [ ]  Merge sort
