@@ -23,7 +23,7 @@ function swapItemsBackwardFrom(&$list, $f)
 
     for($b = $f-1; $b >= 0; $b--) {
         if ($list[$b] >= $num) {
-            // then our number must be before (we swap)
+            // SWAP: our number must be before. We swap until $num is in the right position
             $list[$b+1] = $list[$b];
             $list[$b] = $num;
         }
