@@ -13,8 +13,6 @@ function insertionSort(&$a)
     }
 }
 
-
-
 function putItemInRightPlace(&$list, $f)
 {
     $num = $list[$f];
@@ -48,7 +46,6 @@ assert($listA == [3, 9, 8]);
 $listB = [5, 8, 9, 6];
 putItemInRightPlace($listB, 3);
 assert($listB == [5, 6, 8, 9]);
-
 
 /**
  * @test insertionSort
