@@ -9,6 +9,9 @@
 
 
 ## Graphs
-
+- [ ]  Dijkstra
+- [ ]  Breath first
+- [ ]  Depth first
+- [ ]  Bellman Ford
 
 ## Trees
