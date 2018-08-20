@@ -5,40 +5,38 @@ function insertionSort(&$a)
     $total = count($a);
 
     // forward loop
-    for ($f=1; $f<=$total-1; $f++) {
-        if ($a[$f-1] > $a[$f]) {
-            // backward loop
-            putItemInRightPlace($a, $f);
+    for ($i=1; $i<=$total-1; $i++) {
+        if ($a[$i-1] > $a[$i]) {
+            // backward loop to swap numbers if necessay until put it in the right place
+            putItemInRightPlace($a, $i);
         }
     }
 }
 
-function putItemInRightPlace(&$list, $f)
+function putItemInRightPlace(&$list, $j)
 {
-    $num = $list[$f];
-
-    for($b = $f-1; $b >= 0; $b--) {
-        if ($list[$b] >= $num) {
-            swap($list, $b+1, $b);
-        }
+    for($b = $j-1; $b >= 0; $b--) {
+        swapIfWrongOrder($list, $b, $b+1);
     }
 }
 
-function swap(&$list, $i, $j)
+function swapIfWrongOrder(&$list, $i, $j)
 {
-    $a = $list[$i];
-    $b = $list[$j];
+    if ($list[$i] >= $list[$j]) {
+        $a = $list[$i];
+        $b = $list[$j];
 
-    $list[$i] = $b;
-    $list[$j] = $a;
+        $list[$i] = $b;
+        $list[$j] = $a;
+    }
 }
 
 /**
- * @test SWAP
+ * @test swapIfWrongOrder
  */
-$listA = [8, 9, 3];
-swap($listA, 0, 2);
-assert($listA == [3, 9, 8]);
+$listA = [1, 10, 9, 5];
+swapIfWrongOrder($listA, 1, 3);
+assert($listA == [1, 5, 9, 10]);
 
 /**
  * @test putItemsInRightPosition
