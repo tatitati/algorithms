@@ -1,5 +1,5 @@
 ## Sort
-- [ ]  Bubble sort
+- [x]  Bubble sort
 - [x]  Insertion sort
 - [x]  Selection sort
 - [ ]  Heap sort
