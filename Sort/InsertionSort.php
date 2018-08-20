@@ -1,6 +1,6 @@
 <?php
 
-function insertionSort($a)
+function insertionSort(&$a)
 {
     $total = count($a);
 
@@ -8,27 +8,51 @@ function insertionSort($a)
     for ($f=1; $f<=$total-1; $f++) {
         if ($a[$f-1] > $a[$f]) {
             // backward loop
-            swapItemsBackwardFrom($a, $f);
+            putItemInRightPlace($a, $f);
         }
     }
-
-    print_r($a);
 }
 
 
 
-function swapItemsBackwardFrom(&$list, $f)
+function putItemInRightPlace(&$list, $f)
 {
     $num = $list[$f];
 
     for($b = $f-1; $b >= 0; $b--) {
         if ($list[$b] >= $num) {
-            // SWAP: our number must be before. We swap until $num is in the right position
-            $list[$b+1] = $list[$b];
-            $list[$b] = $num;
+            swap($list, $b+1, $b);
         }
     }
 }
 
-insertionSort([23, 84, 10, 1, 13, 8, 80, 44, 22, 23, 45, 66]);
-// Result: [1, 8, 10, 13, 22, 23, 23, 44, 45, 66, 80, 84]
+function swap(&$list, $i, $j)
+{
+    $a = $list[$i];
+    $b = $list[$j];
+
+    $list[$i] = $b;
+    $list[$j] = $a;
+}
+
+/**
+ * @test SWAP
+ */
+$listA = [8, 9, 3];
+swap($listA, 0, 2);
+assert($listA == [3, 9, 8]);
+
+/**
+ * @test putItemsInRightPosition
+ */
+$listB = [5, 8, 9, 6];
+putItemInRightPlace($listB, 3);
+assert($listB == [5, 6, 8, 9]);
+
+
+/**
+ * @test insertionSort
+ */
+$listC = [23, 84, 10, 1, 13, 15, 8, 80, 44, 22, 23, 45, 66];
+insertionSort($listC);
+assert($listC == [1, 8, 10, 13, 15, 22, 23, 23, 44, 45, 66, 80, 84]);
