@@ -3,7 +3,7 @@
 - [x]  Insertion sort
 - [x]  Selection sort
 - [ ]  Heap sort
-- [ ]  Quick sort (Work in Progress)
+- [x]  Quick sort
 - [ ]  Merge sort
 
 ## Search
