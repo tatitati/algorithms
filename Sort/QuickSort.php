@@ -8,7 +8,7 @@ function quickSort($list) {
         $lowers = extractLowersThanPivot($list, $pivotIndex);
         $biggers = extractBiggersThanPivot($list, $pivotIndex);
 
-        return joinArrays(
+        return joinItems(
             quickSort($lowers),
             $list[$pivotIndex],
             quickSort($biggers)
@@ -16,7 +16,7 @@ function quickSort($list) {
     }
 }
 
-function joinArrays($listA, $pivot, $listB)
+function joinItems($listA, $pivot, $listB)
 {
     return array_merge($listA, [$pivot], $listB);
 }
@@ -58,10 +58,8 @@ function extractBiggersThanPivot($list, $i)
 /**
  * @test joinArrays
  */
-$list1 = [1, 11, 111];
 $pivot = 2;
-$list3 = [3, 33, 333];
-assert(joinArrays($list1, $pivot, $list3) == [1, 11, 111, 2, 3, 33, 333]);
+assert(joinItems([1, 11, 111], $pivot, [3, 33, 333]) == [1, 11, 111, 2, 3, 33, 333]);
 
 /**
  * @test extractLowersThanPivot
