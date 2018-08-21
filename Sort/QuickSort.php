@@ -3,17 +3,17 @@
 function quickSort($list) {
     if (count($list) < 2) {
         return $list;
-    } else {
-        $pivotIndex = array_rand($list, 1);
-        $lowers = extractLowersThanPivot($list, $pivotIndex);
-        $biggers = extractBiggersThanPivot($list, $pivotIndex);
-
-        return joinItems(
-            quickSort($lowers),
-            $list[$pivotIndex],
-            quickSort($biggers)
-        );
     }
+
+    $pivotIndex = array_rand($list, 1);
+    $lowers = extractLowersThanPivot($list, $pivotIndex);
+    $biggers = extractBiggersThanPivot($list, $pivotIndex);
+
+    return joinItems(
+        quickSort($lowers),
+        $list[$pivotIndex],
+        quickSort($biggers)
+    );
 }
 
 function joinItems($listA, $pivot, $listB)
