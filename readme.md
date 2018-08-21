@@ -3,7 +3,7 @@
 - [x]  Insertion sort
 - [x]  Selection sort
 - [ ]  Heap sort
-- [ ]  Quick sort
+- [ ]  Quick sort (Work in Progress)
 - [ ]  Merge sort
 
 ## Search
@@ -15,3 +15,5 @@
 - [ ]  Breath first
 - [ ]  Depth first
 - [ ]  Bellman Ford
+
+## Dynamic Programming
