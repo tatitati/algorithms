@@ -13,6 +13,9 @@
 - [ ] Binary
 - [ ] ...
 
+## Clustering
+- [ ] K-Means
+
 ## Graphs
 - [ ] Dijkstra
 - [ ] Breath first
@@ -29,5 +32,4 @@
 - [ ] Heap
 - [ ] Queue
 - [ ] Linked List
-- [ ] K-Means(Clustering) 
 - [ ] ...
