@@ -6,6 +6,7 @@ function binarySearch($list, $target)
 
     while ($lowIdx <= $highIdx) {
         $midIdx = floor(($lowIdx + $highIdx)/2);
+
         if ($target > $list[$midIdx]) {
             $lowIdx = $midIdx + 1;
             continue;
