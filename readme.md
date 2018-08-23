@@ -11,14 +11,14 @@
 
 ## Search
 - [x] Binary search
-- [ ] Hash search (W.I.P)
+- [ ] Hash search
 - [ ] ...
 
 ## Clustering
 - [ ] K-Means
 
 ## Graphs
-- [ ] Dijkstra
+- [ ] Dijkstra (need queue + linked lists)
 - [ ] Breath first
 - [ ] Depth first
 - [ ] Bellman Ford
@@ -30,7 +30,7 @@
 # DATA STRUCTURES
 - [ ] Trees
 - [ ] Stack
-- [ ] Heap
+- [ ] Heap (tree)
 - [ ] Queue
 - [ ] Linked List
 - [ ] ...
