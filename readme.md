@@ -10,7 +10,7 @@
 - [ ] ...
 
 ## Search
-- [ ] Binary (W.I.P)
+- [x] Binary
 - [ ] Hash Search (W.I.P)
 - [ ] ...
 
