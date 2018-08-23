@@ -10,8 +10,8 @@
 - [ ] ...
 
 ## Search
-- [x] Binary
-- [ ] Hash Search (W.I.P)
+- [x] Binary search
+- [ ] Hash search (W.I.P)
 - [ ] ...
 
 ## Clustering
