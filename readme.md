@@ -6,11 +6,12 @@
 - [ ] Heap sort
 - [x] Quick sort
 - [ ] Merge sort
+- [ ] Bucket sort
 - [ ] ...
 
 ## Search
-- [ ] Linear
-- [ ] Binary
+- [ ] Binary (W.I.P)
+- [ ] Hash Search (W.I.P)
 - [ ] ...
 
 ## Clustering
