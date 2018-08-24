@@ -10,8 +10,8 @@
 - [ ] ...
 
 ## Search
-- [x] Binary search
-- [ ] Hash search
+- [x] Binary search (array)
+- [ ] Binary search tree (BST)
 - [ ] ...
 
 ## Clustering
@@ -28,9 +28,10 @@
 - [ ] ...
 
 # DATA STRUCTURES
-- [ ] Trees
+- [ ] Binary Tree
+- [ ] Black-Red Tree
+- [ ] Heap Tree
 - [ ] Stack
-- [ ] Heap (tree)
 - [ ] Queue
 - [ ] Linked List
 - [ ] ...
