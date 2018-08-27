@@ -1,8 +1,5 @@
 <?php
 
-$data = [9, 500, 2, 30, 1, 80, 123];
-
-
 function splitLeftAndRight($list)
 {
     $midX = floor(count($list)/2);
