@@ -54,50 +54,46 @@ function mergeSort($list)
 }
 
 /**
- * @test
+ * @test split
  */
 $listA = [9, 500, 2, 30, 1];
 list($left, $right) = splitLeftAndRight($listA);
 assert($left === [9, 500]);
 assert($right === [2, 30, 1]);
 
-/**
- * @test
- */
+
+
 $listA = [9, 500, 2, 30];
 list($left, $right) = splitLeftAndRight($listA);
 assert($left === [9, 500]);
 assert($right === [2, 30]);
 
 /**
- * @test
+ * @test merge
  */
 $listA = [9];
 $listB = [];
 assert(merge($listA, $listB) == [9]);
 
-/**
- * @test
- */
+
+
 $listA = [100];
 $listB = [8];
 assert(merge($listA, $listB) == [8, 100]);
 
-/**
- * @test
- */
+
+
 $listA = [3, 100];
 $listB = [8];
 assert(merge($listA, $listB) == [3, 8, 100]);
 
 /**
- * @test
+ * @test mergeSort
  */
 $listA = [3, 100, 8];
 assert(mergeSort($listA) == [3, 8, 100]);
 
-/**
- * @test
- */
+
+
 $listA = [3, 100, 8, 15, 500];
 assert(mergeSort($listA) == [3, 8, 15, 100, 500]);
