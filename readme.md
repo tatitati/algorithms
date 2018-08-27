@@ -10,15 +10,15 @@
 - [ ] ...
 
 ## Search
-- [x] Binary search
-- [ ] Hash search (W.I.P)
+- [x] Binary search (array)
+- [ ] Binary search tree (BST)
 - [ ] ...
 
 ## Clustering
 - [ ] K-Means
 
 ## Graphs
-- [ ] Dijkstra
+- [ ] Dijkstra (need queue + linked lists)
 - [ ] Breath first
 - [ ] Depth first
 - [ ] Bellman Ford
@@ -28,9 +28,10 @@
 - [ ] ...
 
 # DATA STRUCTURES
-- [ ] Trees
+- [ ] Binary Tree
+- [ ] Black-Red Tree
+- [ ] Heap Tree
 - [ ] Stack
-- [ ] Heap
 - [ ] Queue
 - [ ] Linked List
 - [ ] ...
