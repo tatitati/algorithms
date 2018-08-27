@@ -3,11 +3,10 @@
 - [x] Bubble sort
 - [x] Insertion sort
 - [x] Selection sort
-- [ ] Heap sort
 - [x] Quick sort
-- [ ] Merge sort
+- [x] Merge sort
 - [ ] Bucket sort
-- [ ] ...
+- [ ] Radix sort
 
 ## Search
 - [x] Binary search (array)
@@ -31,7 +30,8 @@
 - [ ] Binary Tree
 - [ ] Black-Red Tree
 - [ ] Heap Tree
-- [ ] Stack
-- [ ] Queue
-- [ ] Linked List
+- [ ] Priority Queue
+- [ ] ...
+
+## Concurrency
 - [ ] ...
