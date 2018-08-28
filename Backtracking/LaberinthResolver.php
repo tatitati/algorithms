@@ -11,25 +11,6 @@ function displayLab($lab)
     }
 }
 
-$lab = [
-    [0, 'A',   0, 'R',   0,  0,    0],
-    [0, 'B', 'C', 'D', 'E', 'F',   0],
-    [0,   0,   0,   0,   0, 'H',   0],
-    [0,   0, 'N', 'M', 'L', 'I',   0],
-    [0,   0, 'Q',   0,   0, 'J', 'EXIT'],
-    [0,   0,   0,   0,   0,  0,    0],
-];
-
-$solution = [
-    [0, 'X',   0,   0,   0,  0,    0],
-    [0,   0,   0,   0,   0,  0,    0],
-    [0,   0,   0,   0,   0,  0,    0],
-    [0,   0,   0,   0,   0,  0,    0],
-    [0,   0,   0,   0,   0,  0,    0],
-    [0,   0,   0,   0,   0,  0,    0],
-];
-
-
 function isWall($lab, $i, $j) {
     if (!isset($lab[$i]) || !isset($lab[$i][$j])) {
         return true;
@@ -93,22 +74,6 @@ function solveLaberinth($lab, &$solution, $start)
 }
 
 
-
-
-/**
- * @test valid movements
- */
-
-assert( [
-    [0, 'X',   0,   0,   0,   0,    0],
-    [0, 'X', 'X', 'X', 'X', 'X',    0],
-    [0,   0,   0,   0,   0, 'X',    0],
-    [0,   0,   0,   0,   0, 'X',    0],
-    [0,   0,   0,   0,   0, 'X',   'X'],
-    [0,   0,   0,   0,   0,  0,    0],
-] == solveLaberinth($lab, $solution, ['x' => 0, 'y' => 1]));
-
-
 /**
  * @test valid movements
  */
@@ -138,3 +103,35 @@ assert(true == isInvalidMovement(['x' => 1, 'y' => 1], [1, 3]));
 assert(true == isInvalidMovement(['x' => 1, 'y' => 1], [0, 2]));
 // can move in x,y axis one step
 assert(false == isInvalidMovement(['x' => 1, 'y' => 1], [1, 2]));
+
+
+/**
+ * @test solution
+ */
+
+ $lab = [
+    [0, 'A',   0, 'R',   0,  0,    0],
+    [0, 'B', 'C', 'D', 'E', 'F',   0],
+    [0,   0,   0,   0,   0, 'H',   0],
+    [0,   0, 'N', 'M', 'L', 'I',   0],
+    [0,   0, 'Q',   0,   0, 'J', 'EXIT'],
+    [0,   0,   0,   0,   0,  0,    0],
+];
+
+$solution = [
+    [0, 'X',   0,   0,   0,  0,    0],
+    [0,   0,   0,   0,   0,  0,    0],
+    [0,   0,   0,   0,   0,  0,    0],
+    [0,   0,   0,   0,   0,  0,    0],
+    [0,   0,   0,   0,   0,  0,    0],
+    [0,   0,   0,   0,   0,  0,    0],
+];
+
+assert( [
+    [0, 'X',   0,   0,   0,   0,   0],
+    [0, 'X', 'X', 'X', 'X', 'X',   0],
+    [0,   0,   0,   0,   0, 'X',   0],
+    [0,   0,   0,   0,   0, 'X',   0],
+    [0,   0,   0,   0,   0, 'X', 'X'],
+    [0,   0,   0,   0,   0,  0,    0],
+] == solveLaberinth($lab, $solution, ['x' => 0, 'y' => 1]));
