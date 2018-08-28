@@ -7,6 +7,9 @@
 ## Memoization
 - [ ] ...
 
+## Greedy
+- [ ] ...
+
 ## Sort
 - [x] Bubble sort
 - [x] Insertion sort
@@ -33,6 +36,7 @@
 
 ## Dynamic Programming
 - [ ] Solve Knapsack
+- [ ] Solve text corrector
 
 ## Concurrency
 - [ ] ...
