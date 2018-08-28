@@ -96,8 +96,7 @@ function solveLaberinth($lab, &$solution, $start)
     return false;
 }
 
-$start = ['x' => 0, 'y' => 1];
-solveLaberinth($lab, $solution, $start);
+solveLaberinth($lab, $solution, ['x' => 0, 'y' => 1]);
 echo "\nSOLVED\n";
 displayLab($solution);
 
