@@ -7,6 +7,9 @@
 ## Memoization
 - [ ] ...
 
+## Greedy
+- [ ] ...
+
 ## Sort
 - [x] Bubble sort
 - [x] Insertion sort
