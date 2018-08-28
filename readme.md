@@ -1,4 +1,12 @@
 # ALGORITHMS
+## BackTracking
+- [x] Solve laberinth
+- [ ] Solve Sudoku
+- [ ] ADN sequence
+
+## Memoization
+- [ ] ...
+
 ## Sort
 - [x] Bubble sort
 - [x] Insertion sort
@@ -24,6 +32,9 @@
 - [ ] ...
 
 ## Dynamic Programming
+- [ ] Solve Knapsack
+
+## Concurrency
 - [ ] ...
 
 # DATA STRUCTURES
@@ -31,7 +42,4 @@
 - [ ] Black-Red Tree
 - [ ] Heap Tree
 - [ ] Priority Queue
-- [ ] ...
-
-## Concurrency
 - [ ] ...
