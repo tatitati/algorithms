@@ -127,11 +127,12 @@ $solution = [
     [0,   0,   0,   0,   0,  0,    0],
 ];
 
-assert( [
+solveLaberinth($lab, $solution, ['x' => 0, 'y' => 1]);
+assert([
     [0, 'X',   0,   0,   0,   0,   0],
     [0, 'X', 'X', 'X', 'X', 'X',   0],
     [0,   0,   0,   0,   0, 'X',   0],
     [0,   0,   0,   0,   0, 'X',   0],
     [0,   0,   0,   0,   0, 'X', 'X'],
     [0,   0,   0,   0,   0,  0,    0],
-] == solveLaberinth($lab, $solution, ['x' => 0, 'y' => 1]));
+] == $solution);
