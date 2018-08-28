@@ -4,7 +4,7 @@
 - [ ] Solve Sudoku
 - [ ] ADN sequence
 
-# Memoization
+## Memoization
 - [ ] ...
 
 ## Sort
@@ -34,12 +34,12 @@
 ## Dynamic Programming
 - [ ] Solve Knapsack
 
+## Concurrency
+- [ ] ...
+
 # DATA STRUCTURES
 - [ ] Binary Tree
 - [ ] Black-Red Tree
 - [ ] Heap Tree
 - [ ] Priority Queue
-- [ ] ...
-
-## Concurrency
 - [ ] ...
