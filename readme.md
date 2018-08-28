@@ -1,4 +1,12 @@
 # ALGORITHMS
+## BackTracking
+- [ ] Solve laberinth
+- [ ] Solve Sudoku
+- [ ] ADN sequence
+
+# Memoization
+- [ ] ...
+
 ## Sort
 - [x] Bubble sort
 - [x] Insertion sort
@@ -24,7 +32,7 @@
 - [ ] ...
 
 ## Dynamic Programming
-- [ ] ...
+- [ ] Solve Knapsack
 
 # DATA STRUCTURES
 - [ ] Binary Tree
