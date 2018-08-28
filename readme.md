@@ -1,6 +1,6 @@
 # ALGORITHMS
 ## BackTracking
-- [ ] Solve laberinth
+- [x] Solve laberinth
 - [ ] Solve Sudoku
 - [ ] ADN sequence
 
