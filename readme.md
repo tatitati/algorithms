@@ -33,6 +33,7 @@
 
 ## Dynamic Programming
 - [ ] Solve Knapsack
+- [ ] Solve text corrector
 
 ## Concurrency
 - [ ] ...
