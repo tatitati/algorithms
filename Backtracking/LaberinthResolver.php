@@ -65,10 +65,6 @@ function isInvalidMovement($from, $to)
 
 function solveLaberinth($lab, &$solution, $start)
 {
-    sleep(1.5);
-    echo "\n=======\n";
-    displayLab($solution);
-
     $currentX= $start['x'];
     $currentY= $start['y'];
 
@@ -88,7 +84,7 @@ function solveLaberinth($lab, &$solution, $start)
                 return true;
             }
 
-            // backgracking here
+            // backgracking here (undo)
             $solution[$r][$c] = 0;
         }
     }
@@ -96,13 +92,24 @@ function solveLaberinth($lab, &$solution, $start)
     return false;
 }
 
-solveLaberinth($lab, $solution, ['x' => 0, 'y' => 1]);
-echo "\nSOLVED\n";
-displayLab($solution);
 
 
 
-/** 
+/**
+ * @test valid movements
+ */
+
+assert( [
+    [0, 'X',   0,   0,   0,   0,    0],
+    [0, 'X', 'X', 'X', 'X', 'X',    0],
+    [0,   0,   0,   0,   0, 'X',    0],
+    [0,   0,   0,   0,   0, 'X',    0],
+    [0,   0,   0,   0,   0, 'X',   'X'],
+    [0,   0,   0,   0,   0,  0,    0],
+] == solveLaberinth($lab, $solution, ['x' => 0, 'y' => 1]));
+
+
+/**
  * @test valid movements
  */
 $labA = [
