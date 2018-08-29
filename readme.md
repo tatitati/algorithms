@@ -5,7 +5,7 @@
 - [ ] ADN sequence
 
 ## Memoization
-- [ ] ...
+- [ ] Fibonacci solved with memoization optiimization
 
 ## Greedy
 - [ ] ...
