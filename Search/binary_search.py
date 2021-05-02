@@ -1,7 +1,7 @@
 def binary_search_iterative(arr, x):
-    low = 0
-    high = len(arr) - 1
-    mid = 0
+    low = 0 # low idx
+    high = len(arr) - 1 # high idx
+    mid = 0 # mid idx
 
     while low <= high:
         mid = (high + low) // 2
@@ -30,7 +30,7 @@ def binary_search_recursive(arr, low, high, x):
         return -1
 
 
-arr = [ 2, 3, 4, 10, 40 ]
-print(binary_search_iterative(arr, 10)) # element present at index: 3
-print(binary_search_recursive(arr, 0, len(arr)-1, 10)) # element present at index: 3
+arr = [ 2, 3, 4, 8, 10, 30, 40, 60 ]
+print(binary_search_iterative(arr, 4)) # element present at index: 3
+print(binary_search_recursive(arr, 0, len(arr)-1, 4)) # element present at index: 3
 
