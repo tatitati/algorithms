@@ -5,6 +5,7 @@
 #  D   E  F
 
 
+# adjacency matrix
 graph = {
     'A': ['B', 'C'],
     'B': ['D'],
@@ -44,10 +45,10 @@ print(bfs_iterative(graph, 'A')) # A B C D E F
 
 def dfs_recursive(graph, start, visited=None):
     if visited is None:
-        visited = set()
-    visited.add(start)
-    for next in graph[start] - visited:
-        dfs_recursive(graph, next, visited)
+        visited = []
+    visited.append(start)
+    for neighboor in graph[start]:
+        dfs_recursive(graph, neighboor, visited)
     return visited
 
 print("DFS recursive")
