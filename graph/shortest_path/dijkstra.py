@@ -7,7 +7,7 @@ def dijkstra(nodes, distances):
 
     while True:
         for neighbour, distance in distances[current].items():
-            if neighbour not in unvisited: continue
+            if neighbour in visited: continue
             newDistance = currentDistance + distance
             if unvisited[neighbour] is None or unvisited[neighbour] > newDistance:
                 unvisited[neighbour] = newDistance
@@ -19,14 +19,12 @@ def dijkstra(nodes, distances):
         current, currentDistance = sorted(candidates, key = lambda x: x[1])[0]
     return visited
 
-nodes = ('s', 'a', 'b', 'c', 'd', 't')
+nodes = ('s', 'a', 'b', 't')
 distances = {
-            's': {'a': 2, 'b': 1},
-            'a': {'s': 3, 'b': 4, 'c':8},
-            'b': {'s': 4, 'a': 2, 'd': 2},
-            'c': {'a': 2, 'd': 7, 't': 4},
-            'd': {'b': 1, 'c': 11, 't': 5},
-            't': {'c': 3, 'd': 5}
+            's': {'a': 6, 'b': 2},
+            'a': {'t': 1},
+            'b': {'a': 3, 't': 5},
+            't': {}
             }
 
-print(dijkstra(nodes, distances)) # {'s': 0, 'b': 1, 'a': 2, 'd': 3, 't': 8, 'c': 10}
+print(dijkstra(nodes, distances)) # {'s': 0, 'b': 2, 'a': 5, 't': 6}
