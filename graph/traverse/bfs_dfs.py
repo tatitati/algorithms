@@ -25,24 +25,22 @@ def dfs_iterative(graph, start):
     return visited
 
 print("DFS iterative")
-print(dfs_iterative(graph, 'A')) # A, B, D, C, E, F -or- A C F E B D
+print(dfs_iterative(graph, 'A')) # A C F E B D
 
 
 
 def bfs_iterative(graph, start):
-    visited, queue = set(), [start]
-    while queue:
-        vertex = queue.pop(0)
+    visited, stack = [], [start]
+    while stack:
+        vertex = stack.pop(0)
         if vertex not in visited:
-            visited.add(vertex)
-            queue.extend(graph[vertex] - visited)
+            visited.append(vertex)
+            for neighboor in graph[vertex]:
+                stack.append(neighboor)
     return visited
 
 print("BFS iterative")
-print(bfs_iterative(graph, 'A')) # A, B, C, D, E, F
-
-
-
+print(bfs_iterative(graph, 'A')) # A B C D E F
 
 
 
