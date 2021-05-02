@@ -1,23 +1,23 @@
 def dijkstra(nodes, distances):
     unvisited = {node: None for node in nodes}
-    visited = {}
+    processed = {}
     current = 's'
     currentDistance = 0
     unvisited[current] = currentDistance
 
     while True:
         for neighbour, distance in distances[current].items():
-            if neighbour in visited: continue
+            if neighbour in processed: continue
             newDistance = currentDistance + distance
             if unvisited[neighbour] is None or unvisited[neighbour] > newDistance:
                 unvisited[neighbour] = newDistance
 
-        visited[current] = currentDistance
+        processed[current] = currentDistance
         del unvisited[current]
         if not unvisited: break
         candidates = [node for node in unvisited.items() if node[1]]
         current, currentDistance = sorted(candidates, key = lambda x: x[1])[0]
-    return visited
+    return processed
 
 nodes = ('s', 'a', 'b', 't')
 distances = {
