@@ -20,11 +20,13 @@ def dijkstra(nodes, distances):
     return visited
 
 nodes = ('s', 'a', 'b', 'c', 'd', 't')
-distances = {'s': {'a': 2, 'b': 1},
+distances = {
+            's': {'a': 2, 'b': 1},
             'a': {'s': 3, 'b': 4, 'c':8},
             'b': {'s': 4, 'a': 2, 'd': 2},
             'c': {'a': 2, 'd': 7, 't': 4},
             'd': {'b': 1, 'c': 11, 't': 5},
-            't': {'c': 3, 'd': 5}}
+            't': {'c': 3, 'd': 5}
+            }
 
 print(dijkstra(nodes, distances)) # {'s': 0, 'b': 1, 'a': 2, 'd': 3, 't': 8, 'c': 10}
