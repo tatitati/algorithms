@@ -29,8 +29,10 @@
 
 ## Graphs
 - [ ] Dijkstra (need queue + linked lists)
-- [ ] Breath first
-- [ ] Depth first
+- [X] Breath first iterative
+- [X] Breath first recursive
+- [X] Depth first iterative
+- [X] Depth first recursive
 - [ ] Bellman Ford
 - [ ] ...
 
