@@ -1,10 +1,17 @@
+#     A
+# 	  /\
+#    B  C
+#   /   /\
+#  D   E  F
+
+
 graph = {
     'A': set(['B', 'C']),
-    'B': set(['A', 'D', 'E']),
-    'C': set(['A', 'F']),
-    'D': set(['B']),
-    'E': set(['B', 'F']),
-    'F': set(['C', 'E'])
+    'B': set(['D']),
+    'C': set(['E', 'F']),
+    'D': set([]),
+    'E': set([]),
+    'F': set([])
 }
 
 
@@ -17,7 +24,8 @@ def bfs_iterative(graph, start):
             queue.extend(graph[vertex] - visited)
     return visited
 
-print(bfs_iterative(graph, 'A')) # {'B', 'C', 'A', 'F', 'D', 'E'}
+print("BFS iterative")
+print(bfs_iterative(graph, 'A')) # A, B, C, D, E, F
 
 
 
@@ -30,7 +38,8 @@ def dfs_iterative(graph, start):
             stack.extend(graph[vertex] - visited)
     return visited
 
-print(dfs_iterative(graph, 'A')) # {'E', 'A', 'D', 'B', 'C', 'F'}
+print("DFS iterative")
+print(dfs_iterative(graph, 'A')) # A, B, D, C, E, F
 
 
 
@@ -42,4 +51,5 @@ def dfs_recursive(graph, start, visited=None):
         dfs_recursive(graph, next, visited)
     return visited
 
-print(dfs_recursive(graph, 'C')) # {'E', 'D', 'F', 'A', 'C', 'B'}
+print("DFS recursive")
+print(dfs_recursive(graph, 'A')) # A, B, D, C, E, F
