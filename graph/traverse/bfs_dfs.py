@@ -6,13 +6,27 @@
 
 
 graph = {
-    'A': set(['B', 'C']),
-    'B': set(['D']),
-    'C': set(['E', 'F']),
-    'D': set([]),
-    'E': set([]),
-    'F': set([])
+    'A': ['B', 'C'],
+    'B': ['D'],
+    'C': ['E', 'F'],
+    'D': [],
+    'E': [],
+    'F': []
 }
+
+def dfs_iterative(graph, start):
+    visited, stack = [], [start]
+    while stack:
+        vertex = stack.pop()
+        if vertex not in visited:
+            visited.append(vertex)
+            for neighboor in graph[vertex]:
+                stack.append(neighboor)
+    return visited
+
+print("DFS iterative")
+print(dfs_iterative(graph, 'A')) # A, B, D, C, E, F -or- A C F E B D
+
 
 
 def bfs_iterative(graph, start):
@@ -29,17 +43,6 @@ print(bfs_iterative(graph, 'A')) # A, B, C, D, E, F
 
 
 
-def dfs_iterative(graph, start):
-    visited, stack = set(), [start]
-    while stack:
-        vertex = stack.pop()
-        if vertex not in visited:
-            visited.add(vertex)
-            stack.extend(graph[vertex] - visited)
-    return visited
-
-print("DFS iterative")
-print(dfs_iterative(graph, 'A')) # A, B, D, C, E, F
 
 
 
