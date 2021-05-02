@@ -42,8 +42,6 @@ print(dfs_iterative(graph, 'A')) # A C F E B D
 
 
 def dfs_recursive(graph, start, visited=[]):
-    if visited is None:
-        visited = []
     visited.append(start)
     for neighboor in graph[start]:
         dfs_recursive(graph, neighboor, visited)
