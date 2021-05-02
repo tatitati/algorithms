@@ -14,10 +14,9 @@ def dijkstra(nodes, distances):
 
         processed[current] = currentDistance
         del unvisited[current]
-        if not unvisited: break
+        if not unvisited: return processed
         candidates = [node for node in unvisited.items() if node[1]]
         current, currentDistance = sorted(candidates, key = lambda x: x[1])[0]
-    return processed
 
 nodes = ('s', 'a', 'b', 't')
 distances = {
