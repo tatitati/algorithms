@@ -1,7 +1,7 @@
 def dijkstra(nodes, distances):
     unvisited = {node: None for node in nodes}
     visited = {}
-    current = 'B'
+    current = 's'
     currentDistance = 0
     unvisited[current] = currentDistance
 
@@ -19,14 +19,12 @@ def dijkstra(nodes, distances):
         current, currentDistance = sorted(candidates, key = lambda x: x[1])[0]
     return visited
 
-nodes = ('A', 'B', 'C', 'D', 'E', 'F', 'G')
-distances = {
-    'A': {'B': 5, 'D': 3, 'E': 12, 'F' :5},
-    'B': {'A': 5, 'D': 1, 'G': 2},
-    'C': {'G': 2, 'E': 1, 'F': 16},
-    'D': {'B': 1, 'G': 1, 'E': 1, 'A': 3},
-    'E': {'A': 12, 'D': 1, 'C': 1, 'F': 2},
-    'F': {'A': 5, 'E': 2, 'C': 16},
-    'G': {'B': 2, 'D': 1, 'C': 2}}
+nodes = ('s', 'a', 'b', 'c', 'd', 't')
+distances = {'s': {'a': 2, 'b': 1},
+            'a': {'s': 3, 'b': 4, 'c':8},
+            'b': {'s': 4, 'a': 2, 'd': 2},
+            'c': {'a': 2, 'd': 7, 't': 4},
+            'd': {'b': 1, 'c': 11, 't': 5},
+            't': {'c': 3, 'd': 5}}
 
-print(dijkstra(nodes, distances)) # {'B': 0, 'D': 1, 'E': 2, 'G': 2, 'C': 3, 'A': 4, 'F': 4}
+print(dijkstra(nodes, distances)) # {'s': 0, 'b': 1, 'a': 2, 'd': 3, 't': 8, 'c': 10}
