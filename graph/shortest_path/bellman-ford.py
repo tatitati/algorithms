@@ -8,7 +8,7 @@ def bellman_ford(graph, V, src):
     dist = [float("Inf")] * V
     dist[src] = 0
 
-    # Step 2: relax edges |V| - 1 times
+    # iterations
     for _ in range(V - 1):
         for s, d, w in graph:
             if dist[s] != float("Inf") and dist[s] + w < dist[d]:
@@ -30,11 +30,14 @@ def bellman_ford(graph, V, src):
 V = 5
 graph = [
     # s, d, w
-    [0, 1, 5],
+    [0, 1, -1],
     [0, 2, 4],
-    [1, 3, 3],
-    [2, 1, 6],
-    [3, 2, 2]
+    [1, 2, 3],
+    [1, 3, 2],
+    [1, 4, 2],
+    [3, 2, 5],
+    [3, 1, 1],
+    [4, 3, -3]
 ]
 
 bellman_ford(graph, V, 0)
