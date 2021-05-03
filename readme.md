@@ -25,6 +25,16 @@
 ## Clustering
 - [ ] K-Means
 
+## Dynamic Programming
+- [ ] Solve Knapsack
+- [ ] coin change
+- [ ] rod cut
+
+## Concurrency
+- [ ] ...
+
+# DATA STRUCTURES
+
 ## Graphs
 - [X] Dijkstra
 - [X] Breath first iterative
@@ -35,17 +45,31 @@
 - [X] Floyd Warshall
 - [ ] ...
 
-## Dynamic Programming
-- [ ] Solve Knapsack
-- [ ] coin change
-- [ ] rod cut
+## Binary Tree
+- [ ] Traversal INORDER
+- [ ] Traversal PREORDER
+- [ ] Traversal POSTORDER
+- [ ] Define MIN
+- [ ] Define MAX
+- [ ] Define PRECESSOR
+- [ ] Define SUCESSOR
+- [ ] Operation INSERT
+- [ ] Operation DELETE
+- [ ] Operation SEARCH
+- [ ] Left Rotation
+- [ ] Right Rotation
+- [ ] Mathematical analysis
 
-## Concurrency
-- [ ] ...
+## Hash map
+- [ ] Bloom filters
 
-# DATA STRUCTURES
-- [ ] Binary Tree
-- [ ] Black-Red Tree
+## Heap
 - [ ] Heap Tree
-- [ ] Priority Queue
-- [ ] ...
+
+## Black-Red
+- [ ] Black-Red Tree
+
+## Queue
+- [] Queue
+- [ ] Max Priority Queue
+- [ ] Min Priority Queue
