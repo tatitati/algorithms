@@ -1,9 +1,9 @@
 def insertion_sort(nums):
-    for idx, value in enumerate(nums):
-        while idx > 0 and nums[idx - 1] > value:
-            nums[idx] = nums[idx -1] # swap
-            idx = idx - 1
-        nums[idx] = value
+    for i, value in enumerate(nums):
+        while i > 0 and nums[i - 1] > value:
+            nums[i] = nums[i -1] # swap
+            i = i - 1
+        nums[i] = value
 
     return nums
 
