@@ -8,12 +8,12 @@ INF = float("inf")
 
 def floydWarshall(graph,n): #n=amount of vertex
     dists=graph
-    for source in range(n): # for all node-sources
+    for node in range(n): # for all node-sources
         for i in range(n):
             for j in range(n):
                 dists[i][j] = min(
                     dists[i][j],
-                    dists[i][source] + dists[source][j]
+                    dists[i][node] + dists[node][j]
                 )
     return dists
 
@@ -28,11 +28,11 @@ def floydWarshall(graph,n): #n=amount of vertex
 
 # adjacency matrix
 graph = [
-    # 0, 1, 2, 3
-    [0, 5, INF, 10],
-    [INF, 0, 3, INF],
-    [INF, INF, 0, 1],
-    [INF, INF, INF, 0]
+    # 0,  1,   2,   3
+    [0,   5,   INF, 10 ], # 0
+    [INF, 0,   3,   INF], # 1
+    [INF, INF, 0,   1  ], # 2
+    [INF, INF, INF, 0  ]  # 3
 ]
 
 print(floydWarshall(graph, 4))
