@@ -37,10 +37,10 @@
 
 ## Graphs
 - [X] Dijkstra
-- [X] Breath first iterative
-- [X] Breath first recursive
-- [X] Depth first iterative
-- [X] Depth first recursive
+- [X] Breath First Search (iterative)
+- [X] Breath First Search (recursive)
+- [X] Depth First Search (iterative)
+- [X] Depth First Search (recursive)
 - [X] Bellman Ford
 - [X] Floyd Warshall
 - [ ] ...
