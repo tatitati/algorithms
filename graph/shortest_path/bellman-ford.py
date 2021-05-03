@@ -1,18 +1,20 @@
+INF = float("inf")
+
 def bellman_ford(graph, nodes, src):
-    dist = {node: float("Inf") for node in nodes}
+    dist = {node: INF for node in nodes}
     dist[src] = 0
     iterations = len(nodes) - 1
 
     # iterations
     for _ in range(iterations):
         for s, d, w in graph:
-            if dist[s] != float("Inf") and dist[s] + w < dist[d]:
+            if dist[s] != INF and dist[s] + w < dist[d]:
                 dist[d] = dist[s] + w
 
     # Step 3: detect negative cycle
     # if value changes then we have a negative cycle in the graph and we cannot find the shortest distances
     for s, d, w in graph:
-        if dist[s] != float("Inf") and dist[s] + w < dist[d]:
+        if dist[s] != INF and dist[s] + w < dist[d]:
             print("Graph contains negative weight cycle")
             return
 
