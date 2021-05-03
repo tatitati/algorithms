@@ -4,10 +4,9 @@ class Node:
        self.right = None
        self.data = data
 
-def findPredecessor(root):
-    if(root.left != None): return findPredecessor(root.left)
-    if(root.right != None): return findPredecessor(root.right)
-    else: return root.data
+def findPredecessor(root, original):
+    if(root.left != None):findPredecessor(root.left)
+    if(root.right != None):findPredecessor(root.right)
 
 def findSucessor(root):
     if root != None:
