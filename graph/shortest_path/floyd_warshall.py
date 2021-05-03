@@ -1,4 +1,4 @@
-INF = 99999
+INF = float("inf")
 def floydWarshall(graph,n): #n=no. of vertex
     dist=graph
     for k in range(n):
@@ -21,7 +21,7 @@ graph = [
 print(floydWarshall(graph, 4))
 # [
 #   [0, 5, 8, 9],
-#   [99999, 0, 3, 4],
-#   [99999, 99999, 0, 1],
-#   [99999, 99999, 99999, 0]
+#   [inf, 0, 3, 4],
+#   [inf, inf, 0, 1],
+#   [inf, inf, inf, 0]
 # ]
