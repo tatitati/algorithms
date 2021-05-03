@@ -1,11 +1,12 @@
 def insertion_sort(nums):
     for i, value in enumerate(nums):
-        while i > 0 and nums[i - 1] > value:
-            nums[i] = nums[i -1] # swap
-            i = i - 1
-        nums[i] = value
+        if(i > 0 and nums[i-1] > value): # needed back-swap
+            for j in reversed(range(i)):
+                if nums[j] > value:
+                    nums[j], nums[j+1] = nums[j+1], nums[j] # swap
 
     return nums
 
-array = [4, 22, 41, 40, 27, 30, 36, 16, 42, 37, 14, 39, 3, 6, 34, 9, 21, 2, 29, 47]
-print(insertion_sort(array)) # [2, 3, 4, 6, 9, 14, 16, 21, 22, 27, 29, 30, 34, 36, 37, 39, 40, 41, 42, 47]
+
+array = [4, 22, 41, 40, 27, 30, 36]
+print(insertion_sort(array)) # [4, 22, 27, 30, 36, 40, 41]
