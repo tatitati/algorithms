@@ -10,13 +10,15 @@ def bellman_ford(graph, nodes, src):
     for _ in range(len(nodes) - 1):
         for node in graph:
             for neighboor, distanceToNeighboor in graph[node].items():
-                if dists[node] + distanceToNeighboor < dists[neighboor] and dists[node] != INF:
+                if dists[node] == INF: continue
+                if dists[node] + distanceToNeighboor < dists[neighboor]:
                     dists[neighboor] = dists[node] + distanceToNeighboor
 
     # check negative cycles
     for node in graph:
         for neighboor, distanceToNeighboor in graph[node].items():
-            if dists[node] + distanceToNeighboor < dists[neighboor] and dists[node] != INF:
+            if dists[node] == INF: continue
+            if dists[node] + distanceToNeighboor < dists[neighboor]:
                 print("Graph contains negative weight cycle")
                 return
 
