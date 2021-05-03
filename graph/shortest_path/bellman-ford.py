@@ -1,3 +1,12 @@
+# Like Dijkstra's shortest path algorithm, the Bellman-Ford algorithm is guaranteed to find the
+# shortest path in a graph. Though it is slower than Dijkstra's algorithm, Bellman-Ford is capable
+# of handling graphs that contain negative edge weights, so it is more versatile. It is worth noting
+# that if there exists a negative cycle in the graph, then there is no shortest path. Going around the
+# negative cycle an infinite number of times would continue to decrease the cost of the path (even
+# though the path length is increasing). Because of this, Bellman-Ford can also detect negative cycles
+# which is a useful feature.
+
+
 INF = float("inf")
 
 def bellman_ford(graph, nodes, src):

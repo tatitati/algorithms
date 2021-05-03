@@ -1,3 +1,8 @@
+# The Floyd-Warshall algorithm is a shortest path algorithm for graphs. Like the Bellman-Ford algorithm or
+# the Dijkstra's algorithm, it computes the shortest path in a graph. However, Bellman-Ford and Dijkstra are
+# both single-source, shortest-path algorithms. This means they only compute the shortest path from a single source.
+# Floyd-Warshall, on the other hand, computes the shortest distances between every pair of vertices in the input graph.
+
 INF = float("inf")
 
 
