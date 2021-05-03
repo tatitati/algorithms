@@ -12,7 +12,7 @@ def dijkstra(nodes, graph):
                 table[neighbour]["distance"] = distanceToNeighboor
                 table[neighbour]["through"] = fromNode
             if(table[neighbour]["distance"] is not None):
-                if distanceToNeighboor < table[neighbour]["distance"]:
+                if distanceToNeighboor < table[neighbour]["distance"]: # this is called "relax" (we reduce the distance)
                     table[neighbour]["distance"] = distanceToNeighboor
                     table[neighbour]["through"] = fromNode
         unvisited.remove(fromNode)
