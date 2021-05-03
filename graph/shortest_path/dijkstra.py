@@ -1,29 +1,37 @@
-def dijkstra(nodes, distances):
-    unvisited = {node: None for node in nodes}
-    processed = {}
-    current = 's'
-    currentDistance = 0
-    unvisited[current] = currentDistance
+def dijkstra(nodes, graph):
+    fromNode = 's'
+    unvisited = nodes
+    table = {}
+    for node in nodes:
+        table[node] = {"distance": None, "through": None}
 
-    while True:
-        for neighbour, distance in distances[current].items():
-            if neighbour in processed: continue
-            newDistance = currentDistance + distance
-            if unvisited[neighbour] is None or newDistance < unvisited[neighbour]:
-                unvisited[neighbour] = newDistance
+    while(unvisited != []):
+        fromNode = unvisited[0]
+        for neighbour, distanceToNeighboor in graph[fromNode].items():
+            if(table[neighbour]["distance"] is None):
+                table[neighbour]["distance"] = distanceToNeighboor
+                table[neighbour]["through"] = fromNode
+            if(table[neighbour]["distance"] is not None):
+                if distanceToNeighboor < table[neighbour]["distance"]:
+                    table[neighbour]["distance"] = distanceToNeighboor
+                    table[neighbour]["through"] = fromNode
+        unvisited.remove(fromNode)
 
-        processed[current] = currentDistance
-        del unvisited[current]
-        if not unvisited: return processed
-        candidates = [node for node in unvisited.items() if node[1]]
-        current, currentDistance = sorted(candidates, key = lambda x: x[1])[0]
+    return table
 
-nodes = ('s', 'a', 'b', 't')
-distances = {
+
+nodes = ['s', 'a', 'b', 't']
+graph = {
             's': {'a': 6, 'b': 2},
             'a': {'t': 1},
             'b': {'a': 3, 't': 5},
             't': {}
             }
 
-print(dijkstra(nodes, distances)) # {'s': 0, 'b': 2, 'a': 5, 't': 6}
+print(dijkstra(nodes, graph))
+# {
+#   's': {'distance': None, 'through': None},
+#   'a': {'distance': 3, 'through': 'b'},
+#   'b': {'distance': 2, 'through': 's'},
+#   't': {'distance': 1, 'through': 'a'}
+# }
