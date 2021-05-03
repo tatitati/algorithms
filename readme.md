@@ -36,14 +36,33 @@
 # DATA STRUCTURES
 
 ## Graphs
-- [X] Dijkstra
+### traverse
 - [X] Breath First Search (iterative)
 - [X] Breath First Search (recursive)
 - [X] Depth First Search (iterative)
 - [X] Depth First Search (recursive)
+
+###   Find shortest path (single source)
+- [X] Dijkstra
 - [X] Bellman Ford
-- [X] Floyd Warshall
-- [ ] ...
+
+###  All pairs shortest paths
+- [x] Floyd-Warshall
+- [ ] Johnson's
+
+###   Minimum Spanning Tree (MST)
+- [ ] Kruskal
+- [ ] Prim (with Min Priority Queue + Adjacency matrix)
+- [ ] Prim (with node-color)
+
+### Maximum Flow
+- [ ] Ford-Fulkerson
+
+###   Component strongly connected
+- [ ] ....
+
+###   Classifying edges
+- [ ] ....
 
 ## Binary Tree
 - [ ] Traversal INORDER
