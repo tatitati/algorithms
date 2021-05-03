@@ -28,17 +28,19 @@
 - [ ] K-Means
 
 ## Graphs
-- [ ] Dijkstra (need queue + linked lists)
+- [X] Dijkstra
 - [X] Breath first iterative
 - [X] Breath first recursive
 - [X] Depth first iterative
 - [X] Depth first recursive
-- [ ] Bellman Ford
+- [X] Bellman Ford
+- [X] Floyd Warshall
 - [ ] ...
 
 ## Dynamic Programming
 - [ ] Solve Knapsack
-- [ ] Solve text corrector
+- [ ] coin change
+- [ ] rod cut
 
 ## Concurrency
 - [ ] ...
