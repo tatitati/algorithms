@@ -17,7 +17,7 @@
 - [ ] Radix sort
 
 ## Search
-- [x] Binary search using arary (iterative)
+- [x] Binary search using array (iterative)
 - [x] Binary search using array (recursive)
 - [ ] Binary search tree (BST)
 - [ ] ...
@@ -42,15 +42,15 @@
 - [X] Depth First Search (iterative)
 - [X] Depth First Search (recursive)
 
-###   Find shortest path (single source)
+### Find shortest path (single source)
 - [X] Dijkstra
 - [X] Bellman Ford
 
-###  All pairs shortest paths
+### All pairs shortest paths
 - [x] Floyd-Warshall
 - [ ] Johnson's
 
-###   Minimum Spanning Tree (MST)
+### Minimum Spanning Tree (MST)
 - [ ] Kruskal
 - [ ] Prim (with Min Priority Queue + Adjacency matrix)
 - [ ] Prim (with node-color)
@@ -58,10 +58,10 @@
 ### Maximum Flow
 - [ ] Ford-Fulkerson
 
-###   Component strongly connected
+### Component strongly connected
 - [ ] ....
 
-###   Classifying edges
+### Classifying edges
 - [ ] ....
 
 ## Binary Tree
