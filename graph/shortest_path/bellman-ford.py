@@ -9,14 +9,14 @@ def bellman_ford(graph, nodes, src):
     # "Relax" iterations. Each node is processed N-1 times
     for _ in range(len(nodes) - 1):
         for node in graph:
-            for neighboor, distance in graph[node].items():
-                if dists[node] + distance < dists[neighboor]:
-                    dists[neighboor] = dists[node] + distance
+            for neighboor, distanceToNeighboor in graph[node].items():
+                if dists[node] + distanceToNeighboor < dists[neighboor] and dists[node] != INF:
+                    dists[neighboor] = dists[node] + distanceToNeighboor
 
     # check negative cycles
     for node in graph:
-        for neighboor, distance in graph[node].items():
-            if dists[node] + distance < dists[neighboor]:
+        for neighboor, distanceToNeighboor in graph[node].items():
+            if dists[node] + distanceToNeighboor < dists[neighboor] and dists[node] != INF:
                 print("Graph contains negative weight cycle")
                 return
 
