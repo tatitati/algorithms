@@ -54,27 +54,3 @@ function extractBiggersThanPivot($list, $i)
 
     return $biggers;
 }
-
-/**
- * @test joinArrays
- */
-$pivot = 2;
-assert(joinItems([1, 11, 111], $pivot, [3, 33, 333]) == [1, 11, 111, 2, 3, 33, 333]);
-
-/**
- * @test extractLowersThanPivot
- */
-$lowers = extractLowersThanPivot([10, 1, 5, 2, 7, 15], 4);
-assert($lowers == [1, 5, 2]);
-
-/**
- * @test extractBiggersThanPivot
- */
-$lowers = extractBiggersThanPivot([18, 15, 1, 5, 7, 10], 4);
-assert($lowers == [18, 15, 10]);
-
-/**
- * @test extractBiggersThanPivot
- */
-$result = quickSort([18, 15, 1, 5, 7, 10], 4);
-assert($result == [1, 5, 7, 10, 15, 18]);

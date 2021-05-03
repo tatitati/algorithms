@@ -17,8 +17,8 @@
 - [ ] Radix sort
 
 ## Search
-- [x] Binary search (array, iterative)
-- [x] Binary search (array, recursive)
+- [x] Binary search using arary (iterative)
+- [x] Binary search using array (recursive)
 - [ ] Binary search tree (BST)
 - [ ] ...
 
