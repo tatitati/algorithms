@@ -8,12 +8,12 @@ INF = float("inf")
 
 def floydWarshall(graph,n): #n=amount of vertex
     dists=graph
-    for k in range(n):
+    for source in range(n): # for all node-sources
         for i in range(n):
             for j in range(n):
                 dists[i][j] = min(
                     dists[i][j],
-                    dists[i][k] + dists[k][j]
+                    dists[i][source] + dists[source][j]
                 )
     return dists
 
