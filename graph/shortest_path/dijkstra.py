@@ -9,7 +9,7 @@ def dijkstra(nodes, distances):
         for neighbour, distance in distances[current].items():
             if neighbour in processed: continue
             newDistance = currentDistance + distance
-            if unvisited[neighbour] is None or unvisited[neighbour] > newDistance:
+            if unvisited[neighbour] is None or newDistance < unvisited[neighbour]:
                 unvisited[neighbour] = newDistance
 
         processed[current] = currentDistance
