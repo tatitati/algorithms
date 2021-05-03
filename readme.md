@@ -68,16 +68,15 @@
 - [x] Traversal INORDER
 - [x] Traversal PREORDER
 - [x] Traversal POSTORDER
-- [ ] Define MIN
-- [ ] Define MAX
-- [ ] Define PRECESSOR
-- [ ] Define SUCESSOR
+- [x] Define MIN
+- [x] Define MAX
+- [x] Define PRECESSOR
+- [x] Define SUCESSOR
 - [ ] Operation INSERT
 - [ ] Operation DELETE
 - [ ] Operation SEARCH
 - [ ] Rotation Left
 - [ ] Rotation Right
-- [ ] Mathematical analysis
 
 ## Hash map
 - [ ] Bloom filters
