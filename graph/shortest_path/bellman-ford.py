@@ -1,10 +1,10 @@
 def bellman_ford(graph, nodes, src):
     dist = {node: float("Inf") for node in nodes}
     dist[src] = 0
-    V = len(nodes)
+    iterations = len(nodes) - 1
 
     # iterations
-    for _ in range(V - 1):
+    for _ in range(iterations):
         for s, d, w in graph:
             if dist[s] != float("Inf") and dist[s] + w < dist[d]:
                 dist[d] = dist[s] + w
