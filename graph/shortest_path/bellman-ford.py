@@ -1,12 +1,7 @@
-# Print the solution
-def print_solution(dist, V):
-    print("Vertex Distance from Source")
-    for i in range(V):
-        print("{0}\t\t{1}".format(i, dist[i]))
-
-def bellman_ford(graph, V, src):
-    dist = [float("Inf")] * V
+def bellman_ford(graph, nodes, src):
+    dist = {node: float("Inf") for node in nodes}
     dist[src] = 0
+    V = len(nodes)
 
     # iterations
     for _ in range(V - 1):
@@ -22,22 +17,26 @@ def bellman_ford(graph, V, src):
             print("Graph contains negative weight cycle")
             return
 
-    # No negative weight cycle found!
-    # Print the distance and predecessor array
-    print_solution(dist, V)
+    # No negative weight cycle found
+    return dist
 
 
-V = 5
+nodes = ["a", "b", "c", "d", "e"]
 graph = [
     # s, d, w
-    [0, 1, -1],
-    [0, 2, 4],
-    [1, 2, 3],
-    [1, 3, 2],
-    [1, 4, 2],
-    [3, 2, 5],
-    [3, 1, 1],
-    [4, 3, -3]
+    ["a", "b", -1],
+    ["a", "c", 4],
+    ["b", "c", 3],
+    ["b", "d", 2],
+    ["b", "e", 2],
+    ["d", "c", 5],
+    ["d", "b", 1],
+    ["e", "d", -3]
 ]
 
-bellman_ford(graph, V, 0)
+print(bellman_ford(graph, nodes, "a"))
+# 0        0
+# 1        -1
+# 2        2
+# 3        -2
+# 4        1
