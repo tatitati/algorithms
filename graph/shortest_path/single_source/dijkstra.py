@@ -26,7 +26,7 @@ graph = {
             'a': {'t': 1},
             'b': {'a': 3, 't': 5},
             't': {}
-            }
+        }
 
 print(dijkstra(nodes, graph))
 # {
