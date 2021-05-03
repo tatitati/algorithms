@@ -7,9 +7,6 @@
 ## Memoization
 - [ ] Fibonacci solved with memoization optiimization
 
-## Greedy
-- [ ] ...
-
 ## Sort
 - [x] Bubble sort
 - [x] Insertion sort
