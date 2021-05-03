@@ -6,16 +6,16 @@
 INF = float("inf")
 
 
-def floydWarshall(graph,n): #n=no. of vertex
-    dist=graph
+def floydWarshall(graph,n): #n=amount of vertex
+    dists=graph
     for k in range(n):
         for i in range(n):
             for j in range(n):
-                dist[i][j] = min(
-                    dist[i][j],
-                    dist[i][k] + dist[k][j]
+                dists[i][j] = min(
+                    dists[i][j],
+                    dists[i][k] + dists[k][j]
                 )
-    return dist
+    return dists
 
 
 graph = [
