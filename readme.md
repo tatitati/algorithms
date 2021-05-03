@@ -65,9 +65,9 @@
 - [ ] ....
 
 ## Binary Tree
-- [ ] Traversal INORDER
-- [ ] Traversal PREORDER
-- [ ] Traversal POSTORDER
+- [x] Traversal INORDER
+- [x] Traversal PREORDER
+- [x] Traversal POSTORDER
 - [ ] Define MIN
 - [ ] Define MAX
 - [ ] Define PRECESSOR
@@ -75,8 +75,8 @@
 - [ ] Operation INSERT
 - [ ] Operation DELETE
 - [ ] Operation SEARCH
-- [ ] Left Rotation
-- [ ] Right Rotation
+- [ ] Rotation Left
+- [ ] Rotation Right
 - [ ] Mathematical analysis
 
 ## Hash map
