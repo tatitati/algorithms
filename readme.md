@@ -70,6 +70,6 @@
 - [ ] Black-Red Tree
 
 ## Queue
-- [] Queue
+- [ ] Queue
 - [ ] Max Priority Queue
 - [ ] Min Priority Queue
