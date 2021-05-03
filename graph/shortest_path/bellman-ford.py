@@ -5,10 +5,7 @@ def print_solution(dist, V):
         print("{0}\t\t{1}".format(i, dist[i]))
 
 def bellman_ford(graph, V, src):
-
-    # Step 1: fill the distance array and predecessor array
     dist = [float("Inf")] * V
-    # Mark the source vertex
     dist[src] = 0
 
     # Step 2: relax edges |V| - 1 times
