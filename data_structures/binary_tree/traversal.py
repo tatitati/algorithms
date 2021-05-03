@@ -5,10 +5,9 @@ class Node:
        self.data = data
 
 def inOrder(root):
-   if root:
-       inOrder(root.left)
-       print(root.data)
-       inOrder(root.right)
+    if(root.left != None):inOrder(root.left)
+    print(root.data)
+    if(root.right != None):inOrder(root.right)
 
 def preOrder(root):
    if root:
@@ -36,5 +35,5 @@ root.left.right = Node(5)
 # 4  5
 
 print(inOrder(root))   # 4 2 5 1 3
-print(preOrder(root))  # 1 2 4 5 3
-print(postOrder(root)) # 4 5 2 3 1
+# print(preOrder(root))  # 1 2 4 5 3
+# print(postOrder(root)) # 4 5 2 3 1
