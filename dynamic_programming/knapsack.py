@@ -21,8 +21,7 @@ def knapSack(wMax, weights, vals, n):
             valCurrentItem = vals[row - 1]
             weightCurrentItem = weights[row - 1]
 
-            if row == 0 or column == 0:
-                continue
+            if row == 0 or column == 0: continue
             elif weightCurrentItem <= column:
                 bestValueForRemainingSpace = table[row - 1][column - weightCurrentItem]
                 previousMax = table[row - 1][column]
@@ -31,12 +30,9 @@ def knapSack(wMax, weights, vals, n):
                     previousMax,                                  # same column but previous row
                     valCurrentItem + bestValueForRemainingSpace   # val of current item + best solution for rest of space (in previous row)
                 )
-            else:
-                table[row][column] = table[row-1][column]
+            else: table[row][column] = table[row-1][column]
 
-            print(table)
-
-
+    return table
 
 vals = [1500, 3000, 2000]
 weights = [1, 4, 3]

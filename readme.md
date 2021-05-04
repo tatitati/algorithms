@@ -26,7 +26,7 @@
 - [ ] K-Means
 
 ## Dynamic Programming
-- [ ] Solve Knapsack
+- [x] Solve Knapsack
 - [ ] coin change
 - [ ] rod cut
 
