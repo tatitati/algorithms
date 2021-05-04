@@ -4,27 +4,44 @@
 # to choose from a set of projects or tasks under a fixed budget or time constraint.
 # KnapSack can be solved as well using a greedy algorithm or force brute
 
-def knapSack(W, wt, val, n):
-    K = [[0 for x in range(W + 1)] for x in range(n + 1)]
+def knapSack(wMax, weights, vals, n):
+    # init matrix:
+    rows = n
+    columns = wMax
+    table = [[0 for i in range(columns + 1)] for j in range(rows + 1)]
+    # [
+    #   [0, 0, 0, 0, 0],
+    #   [0, 0, 0, 0, 0],
+    #   [0, 0, 0, 0, 0],
+    #   [0, 0, 0, 0, 0]
+    # ]
 
-    # Build table K[][] in bottom up manner
-    for i in range(n + 1):
-        for w in range(W + 1):
-            if i == 0 or w == 0:
-                K[i][w] = 0
-            elif wt[i - 1] <= w:
-                K[i][w] = max(val[i - 1]
-                              + K[i - 1][w - wt[i - 1]],
-                              K[i - 1][w])
+    for row, _ in enumerate(table):
+        for column, _ in enumerate(table[row]):
+            valCurrentItem = vals[row - 1]
+            weightCurrentItem = weights[row - 1]
+
+            if row == 0 or column == 0:
+                continue
+            elif weightCurrentItem <= column:
+                bestValueForRemainingSpace = table[row - 1][column - weightCurrentItem]
+                previousMax = table[row - 1][column]
+
+                table[row][column] = max(
+                    previousMax,                                  # same column but previous row
+                    valCurrentItem + bestValueForRemainingSpace   # val of current item + best solution for rest of space (in previous row)
+                )
             else:
-                K[i][w] = K[i - 1][w]
+                table[row][column] = table[row-1][column]
 
-    return K[n][W]
+            print(table)
 
 
-# Driver code
-val = [60, 100, 120]
-wt = [10, 20, 30]
-W = 50 # max total weight
-n = len(val)
-print(knapSack(W, wt, val, n)) # 100(20kg) + 120(30kg) = 220
+
+vals = [1500, 3000, 2000]
+weights = [1, 4, 3]
+wMax = 4
+n  = 3
+
+print(knapSack(wMax, weights, vals, n))
+
