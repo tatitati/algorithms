@@ -3,15 +3,15 @@ class Node:
        self.left = None
        self.right = None
        self.data = data
-
-def findPredecessor(root, original):
-    if(root.left != None):findPredecessor(root.left)
-    if(root.right != None):findPredecessor(root.right)
-
-def findSucessor(root):
-    if root != None:
-       findSucessor(root.left)
-       findSucessor(root.right)
+#
+# def findPredecessor(root, original):
+#     if(root.left != None):findPredecessor(root.left)
+#     if(root.right != None):findPredecessor(root.right)
+#
+# def findSucessor(root):
+#     if root != None:
+#        findSucessor(root.left)
+#        findSucessor(root.right)
 
 root = Node(4)
 root.left = Node(2)

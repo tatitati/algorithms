@@ -68,10 +68,10 @@
 - [x] Traversal INORDER
 - [x] Traversal PREORDER
 - [x] Traversal POSTORDER
-- [x] Define MIN
-- [x] Define MAX
-- [x] Define PRECESSOR
-- [x] Define SUCESSOR
+- [x] Find MIN
+- [x] Find MAX
+- [ ] Find inorder PRECESSOR
+- [ ] Find inorder SUCESSOR
 - [ ] Operation INSERT
 - [ ] Operation DELETE
 - [ ] Operation SEARCH
