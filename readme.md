@@ -10,9 +10,9 @@
 ## Sort
 - [x] Bubble sort
 - [x] Insertion sort
-- [x] Selection sort
-- [x] Quick sort
 - [x] Merge sort
+- [ ] Selection sort
+- [ ] Quick sort
 - [ ] Bucket sort
 - [ ] Radix sort
 
