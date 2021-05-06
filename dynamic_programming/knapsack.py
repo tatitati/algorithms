@@ -1,8 +1,10 @@
-# determine each item’s number to include in a collection so that the total weight is less than or equal to a given limit.
-# And also, the total value is maximum.
-# The practical application of The knapsack problem algorithm is used in resource allocation. However, the decision-makers have
-# to choose from a set of projects or tasks under a fixed budget or time constraint.
-# KnapSack can be solved as well using a greedy algorithm or force brute
+"""
+determine each items number to include in a collection so that the total weight is less than or equal to a given limit.
+And also, the total value is maximum.
+The practical application of The knapsack problem algorithm is used in resource allocation. However, the decision-makers have
+to choose from a set of projects or tasks under a fixed budget or time constraint.
+KnapSack can be solved as well using a greedy algorithm or force brute
+"""
 
 def knapSack(wMax, weights, vals, n):
     # init matrix:
@@ -16,21 +18,21 @@ def knapSack(wMax, weights, vals, n):
     #   [0, 0, 0, 0, 0]
     # ]
 
-    for row, _ in enumerate(table):
-        for column, _ in enumerate(table[row]):
-            valCurrentItem = vals[row - 1]
-            weightCurrentItem = weights[row - 1]
+    for y, _ in enumerate(table):
+        for x, _ in enumerate(table[y]):
+            valCurrentItem = vals[y - 1]
+            weightCurrentItem = weights[y - 1]
 
-            if row == 0 or column == 0: continue
-            elif weightCurrentItem <= column:
-                bestValueForRemainingSpace = table[row - 1][column - weightCurrentItem]
-                previousMax = table[row - 1][column]
+            if y == 0 or x == 0: continue
+            elif weightCurrentItem <= x:
+                bestValueForRemainingSpace = table[y - 1][x - weightCurrentItem]
+                previousMax = table[y - 1][x]
 
-                table[row][column] = max(
+                table[y][x] = max(
                     previousMax,                                  # same column but previous row
                     valCurrentItem + bestValueForRemainingSpace   # val of current item + best solution for rest of space (in previous row)
                 )
-            else: table[row][column] = table[row-1][column]
+            else: table[y][x] = table[y-1][x]
 
     return table
 
