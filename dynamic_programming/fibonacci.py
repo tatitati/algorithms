@@ -1,4 +1,3 @@
-
 def fib(n):
     fibs = []
     for i in range(n+1):
