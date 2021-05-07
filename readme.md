@@ -26,6 +26,7 @@
 - [x] Fibonacci (Top-DOWN, memoization)
 - [x] Fibonacci (Bottom-UP, tabulation)
 - [x] Solve Knapsack
+- [x] Max array sum
 - [ ] coin change
 - [ ] rod cut
 
