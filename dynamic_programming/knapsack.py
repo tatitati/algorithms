@@ -7,10 +7,7 @@ KnapSack can be solved as well using a greedy algorithm or force brute
 """
 
 def knapSack(wMax, weights, vals, n):
-    # init matrix:
-    rows = n
-    columns = wMax
-    table = [[0 for i in range(columns + 1)] for j in range(rows + 1)]
+    table = [[0 for i in range(wMax + 1)] for j in range(n + 1)]
     # [
     #   [0, 0, 0, 0, 0],
     #   [0, 0, 0, 0, 0],
