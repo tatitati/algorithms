@@ -23,6 +23,6 @@ for idx, _ in enumerate(nums):
             result[idx-2] + nums[idx]
         ))
         
-print(result)
-print(max(result))
+print(result)      # [3, 5, 5, 13, 15]
+print(max(result)) #15
     
