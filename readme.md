@@ -4,9 +4,6 @@
 - [ ] Solve Sudoku
 - [ ] ADN sequence
 
-## Memoization
-- [ ] Fibonacci solved with memoization optiimization
-
 ## Sort
 - [x] Bubble sort
 - [x] Insertion sort
@@ -26,6 +23,8 @@
 - [ ] K-Means
 
 ## Dynamic Programming
+- [x] Fibonacci (Top-DOWN, memoization)
+- [x] Fibonacci (Bottom-UP, tabulation)
 - [x] Solve Knapsack
 - [ ] coin change
 - [ ] rod cut
