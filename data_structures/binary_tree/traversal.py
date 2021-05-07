@@ -21,6 +21,12 @@ def postOrder(root):
        postOrder(root.right)
        print(root.data)
 
+# def levelOrder(root) # root to leaves
+
+
+# def levelOrderReverse(root) # leaves to root
+
+
 
 root = Node(1)
 root.left = Node(2)
