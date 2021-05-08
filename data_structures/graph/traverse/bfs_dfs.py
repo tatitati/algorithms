@@ -67,12 +67,3 @@ print(dfs_iterative(graph, 'A')) # ['A', 'D', 'C', 'F', 'B', 'E']
 
 
 
-
-
-
-
-def dfs_recursive(graph, start, visited=[]):
-
-
-print("DFS recursive")
-print(dfs_recursive(graph, 'A')) # A B D E F
