@@ -34,15 +34,13 @@ INF = float("inf");
 r = [0] + [-INF]*5
 
 def top_down_rod_cutting(prices, n):
-  if(r[n] >= 0):
-    return r[n]
+  if(r[n] >= 0):return r[n]
 
-  maximum_revenue = -1*INF
-
+  maxVal = -INF
   for i in range(1, n+1):
-    maximum_revenue = max(maximum_revenue, prices[i] + top_down_rod_cutting(prices, n-i))
+    maxVal = max(maxVal, prices[i] + top_down_rod_cutting(prices, n-i))
 
-  r[n] = maximum_revenue
+  r[n] = maxVal
   return r[n]
 
 print(top_down_rod_cutting([0, 1, 4, 3, 7, 1], 4))
