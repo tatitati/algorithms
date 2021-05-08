@@ -20,24 +20,32 @@ INF = float("inf");
 # print(rodBottomUp(4)) # 9
 
 
+
+
+
+
+
+
+
+
+
+
 # TOP-DOWN (memoization)
-# INF = 100000;
-# r = [0] + [-1*INF]*5
+r = [0] + [-INF]*5
 
-# def top_down_rod_cutting(prices, n):
-#   if(r[n] >= 0):
-#     return r[n]
+def top_down_rod_cutting(prices, n):
+  if(r[n] >= 0):
+    return r[n]
 
-#   maximum_revenue = -1*INF
+  maximum_revenue = -1*INF
 
-#   for i in range(1, n+1):
-#     maximum_revenue = max(maximum_revenue, prices[i] + top_down_rod_cutting(prices, n-i))
+  for i in range(1, n+1):
+    maximum_revenue = max(maximum_revenue, prices[i] + top_down_rod_cutting(prices, n-i))
 
-#   r[n] = maximum_revenue
-#   return r[n]
+  r[n] = maximum_revenue
+  return r[n]
 
-# print(top_down_rod_cutting(prices, 3))
-
+print(top_down_rod_cutting([0, 1, 4, 3, 7, 1], 4))
 
 
 
@@ -48,20 +56,21 @@ INF = float("inf");
 
 
 
-def cutRodTopDown(prices, cutSize):
-    if(cutSize <= 0): return 0
-    max_val = -INF
-    for i in range(0, cutSize):
-        max_val = max(
-          max_val, 
-          prices[i] + cutRodTopDown(prices, cutSize - i - 1))
 
-    return max_val
+# def cutRodTopDown(prices, cutSize):
+#     if(cutSize <= 0): return 0
+#     max_val = -INF
+#     for i in range(cutSize):
+#         max_val = max(
+#           max_val, 
+#           prices[i] + cutRodTopDown(prices, cutSize - i - 1))
 
-print(cutRodTopDown(
-  [0, 1, 4, 3, 7, 1], 
-  3
-))
+#     return max_val
+
+# print(cutRodTopDown(
+#   [0, 1, 4, 3, 7, 1], 
+#   5
+# ))
 
 
 
