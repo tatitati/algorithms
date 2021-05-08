@@ -1,3 +1,5 @@
+from collections import deque
+
 class Node:
    def __init__(self,data):
        self.left = None
@@ -31,13 +33,22 @@ def levelOrder(root):
         print (queue[0].data)
         node = queue.pop(0)
   
-        if node.left is not None:
-            queue.append(node.left)
+        if node.left is not None:  queue.append(node.left)
+        if node.right is not None: queue.append(node.right)    
 
-        if node.right is not None:
-            queue.append(node.right)    
-
-# def levelOrderReverse(root) # leaves to root
+def levelOrderReverse(root): # leaves to root
+    q = deque()
+    q.append(root)
+    ans = deque()
+    while q:
+        node = q.popleft()
+        if node is None:continue    
+        ans.appendleft(node.data)
+      
+        if node.right: q.append(node.right)              
+        if node.left:  q.append(node.left)
+              
+    return ans
 
 
 
@@ -61,3 +72,4 @@ print(inOrder(root))   # 24 32 40 52 58 62 69
 print(preOrder(root))  # 52 40 24 32 62 58 69
 print(postOrder(root)) # 32 24 40 58 69 62 52
 print(levelOrder(root)) # 52 40 62 24 58 69 32
+print(levelOrderReverse(root)) # 32 24 58 69 40 62 52
