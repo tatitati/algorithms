@@ -21,13 +21,21 @@ def postOrder(root):
        postOrder(root.right)
        print(root.data)
 
-def levelOrder(root): # root to leaves
-    if root.left:
-        print(root.left.data)
-        levelOrder(root.right)
-    if root.right:
-        print(root.right.data)
-        levelOrder(root.left)        
+def levelOrder(root):
+    if root is None: return
+    
+    queue = []    
+    queue.append(root)
+ 
+    while(len(queue) > 0):
+        print (queue[0].data)
+        node = queue.pop(0)
+  
+        if node.left is not None:
+            queue.append(node.left)
+ 
+        if node.right is not None:
+            queue.append(node.right)    
 
 # def levelOrderReverse(root) # leaves to root
 
@@ -52,4 +60,4 @@ root.right.right = Node(69)
 # print(inOrder(root))   # 24 32 40 52 58 62 69
 # print(preOrder(root))  # 52 40 24 32 62 58 69
 # print(postOrder(root)) # 32 24 40 58 69 62 52
-print(levelOrder(root)) # 4 5 2 3 1
+print(levelOrder(root)) # 52 40 62 24 58 69 32
