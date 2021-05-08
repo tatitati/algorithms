@@ -1,4 +1,4 @@
-# BOTTOM-UP (tabulation) approach
+# BOTTOM-UP (tabulation)
 def fib(n):
     fibs = []
     for i in range(n+1):
@@ -13,7 +13,7 @@ def fib(n):
 print(fib(4)) # 3
 
 
-# TOP-BOTTOM (memoization) approach
+# TOP-BOTTOM (memoization)
 acc = []
 def fib(n):
     if n < 0: return
