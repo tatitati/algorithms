@@ -73,6 +73,10 @@
 ### Classifying edges
 - [ ] ....
 
+### Strings
+ - [x] Count consonants (iterative)
+ - [x] Count consonants (recursive)
+
 ## Binary Tree
 - [x] Traversal INORDER
 - [x] Traversal PREORDER
