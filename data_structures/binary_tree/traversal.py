@@ -33,7 +33,7 @@ def levelOrder(root):
   
         if node.left is not None:
             queue.append(node.left)
- 
+
         if node.right is not None:
             queue.append(node.right)    
 
@@ -57,7 +57,7 @@ root.right.right = Node(69)
 #   \
 #    32
 
-# print(inOrder(root))   # 24 32 40 52 58 62 69
-# print(preOrder(root))  # 52 40 24 32 62 58 69
-# print(postOrder(root)) # 32 24 40 58 69 62 52
+print(inOrder(root))   # 24 32 40 52 58 62 69
+print(preOrder(root))  # 52 40 24 32 62 58 69
+print(postOrder(root)) # 32 24 40 58 69 62 52
 print(levelOrder(root)) # 52 40 62 24 58 69 32
