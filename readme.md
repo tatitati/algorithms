@@ -70,7 +70,7 @@
 - [x] Traversal PREORDER
 - [x] Traversal POSTORDER
 - [x] Traversal LEVEL ORDER
-- [ ] Traversal LEVEL ORDER (reverse order)
+- [x] Traversal LEVEL ORDER (reverse order)
 - [x] Find MIN
 - [x] Find MAX
 - [ ] Find inorder PRECESSOR
