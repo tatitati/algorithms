@@ -6,10 +6,10 @@ class Node:
        self.right = None
        self.data = data
 
-def inOrder(root):
-    if(root.left != None):inOrder(root.left)
-    print(root.data)
-    if(root.right != None):inOrder(root.right)
+def inOrder(node):
+    if(node.left != None):inOrder(node.left)
+    print(node.data)
+    if(node.right != None):inOrder(node.right)
 
 def preOrder(node):
    if node:
