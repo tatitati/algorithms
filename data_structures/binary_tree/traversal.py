@@ -11,23 +11,23 @@ def inOrder(root):
     print(root.data)
     if(root.right != None):inOrder(root.right)
 
-def preOrder(root):
-   if root:
-       print(root.data)
-       preOrder(root.left)
-       preOrder(root.right)
+def preOrder(node):
+   if node:
+       print(node.data)
+       preOrder(node.left)
+       preOrder(node.right)
 
-def postOrder(root):
-   if root:
-       postOrder(root.left)
-       postOrder(root.right)
-       print(root.data)
+def postOrder(node):
+   if node:
+       postOrder(node.left)
+       postOrder(node.right)
+       print(node.data)
 
-def levelOrder(root):
-    if root is None: return
+def levelOrder(node):
+    if node is None: return
     
     queue = []    
-    queue.append(root)
+    queue.append(node)
  
     while(len(queue) > 0):
         print (queue[0].data)
@@ -36,9 +36,9 @@ def levelOrder(root):
         if node.left is not None:  queue.append(node.left)
         if node.right is not None: queue.append(node.right)    
 
-def levelOrderReverse(root): # leaves to root
+def levelOrderReverse(node): # leaves to root
     q = deque()
-    q.append(root)
+    q.append(node)
     ans = deque()
     while q:
         node = q.popleft()
