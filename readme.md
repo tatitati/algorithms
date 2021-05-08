@@ -1,4 +1,8 @@
 # ALGORITHMS
+## Recursion
+- [x] Sum of numbers from 1 to n
+- [x] Fibonacci
+
 ## BackTracking
 - [x] Solve laberinth
 - [ ] Solve Sudoku
