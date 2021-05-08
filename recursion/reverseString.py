@@ -5,7 +5,7 @@ def reverseString(text, i):
         text[i], text[-1-i] = text[-1-i], text[i]
         return reverseString(text, i+1)
 
-# print(reverseString(list("hola"), 0))
+print(reverseString(list("hola"), 0)) # ['a', 'l', 'o', 'h']
 
 
 
@@ -14,6 +14,6 @@ def reverseString2(text):
     else:         
         return text[-1:] + reverseString2(text[:-1])
 
-print(reverseString2(list("hola")))
+print(reverseString2(list("hola"))) # ['a', 'l', 'o', 'h']
 
 
