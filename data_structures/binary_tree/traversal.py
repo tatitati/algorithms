@@ -21,25 +21,35 @@ def postOrder(root):
        postOrder(root.right)
        print(root.data)
 
-# def levelOrder(root) # root to leaves
-
+def levelOrder(root): # root to leaves
+    if root.left:
+        print(root.left.data)
+        levelOrder(root.right)
+    if root.right:
+        print(root.right.data)
+        levelOrder(root.left)        
 
 # def levelOrderReverse(root) # leaves to root
 
 
 
-root = Node(1)
-root.left = Node(2)
-root.right = Node(3)
-root.left.left = Node(4)
-root.left.right = Node(5)
+root = Node(52)
+root.left = Node(40)
+root.left.left = Node(24)
+root.left.left.right = Node(32)
+root.right = Node(62)
+root.right.left = Node(58)
+root.right.right = Node(69)
 
-#    1
+#    52
 #    /\
-#   2  3
-#  /\
-# 4  5
+#   40 62
+#  /    /\
+# 24  58  69
+#   \
+#    32
 
-print(inOrder(root))   # 4 2 5 1 3
-# print(preOrder(root))  # 1 2 4 5 3
-# print(postOrder(root)) # 4 5 2 3 1
+# print(inOrder(root))   # 24 32 40 52 58 62 69
+# print(preOrder(root))  # 52 40 24 32 62 58 69
+# print(postOrder(root)) # 32 24 40 58 69 62 52
+print(levelOrder(root)) # 4 5 2 3 1
