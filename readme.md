@@ -28,7 +28,7 @@
 - [x] Solve Knapsack
 - [x] Max array sum
 - [ ] coin change
-- [ ] rod cut
+- [x] rod cut
 
 ## Concurrency
 - [ ] ...
@@ -68,6 +68,8 @@
 - [x] Traversal INORDER
 - [x] Traversal PREORDER
 - [x] Traversal POSTORDER
+- [x] Traversal LEVEL ORDER
+- [ ] Traversal LEVEL ORDER (reverse order)
 - [x] Find MIN
 - [x] Find MAX
 - [ ] Find inorder PRECESSOR
