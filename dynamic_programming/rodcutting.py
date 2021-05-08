@@ -36,7 +36,6 @@ print(top_down_rod([0, 1, 4, 3, 7, 1], 5))
 
 
 # BOTTOM-UP (tabulation)
-
 r = [0] + [-INF]*5
 def bottom_up_rod(prices, cutSize):
   r = [0]*(cutSize+1)
