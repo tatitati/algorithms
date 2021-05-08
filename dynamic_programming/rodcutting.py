@@ -46,6 +46,13 @@ def top_down_rod(prices, cutSize):
   print(r)
   return r[cutSize]
 
+print(top_down_rod([0, 2, 3, 7, 8, 9], 5))
+# [0, 2, -inf, -inf, -inf, -inf]
+# [0, 2, 4, -inf, -inf, -inf]
+# [0, 2, 4, 7, -inf, -inf]
+# [0, 2, 4, 7, 9, -inf]
+# [0, 2, 4, 7, 9, 11]
+# 11
 print(top_down_rod([0, 1, 4, 3, 7, 1], 5))
 # [0, 1, -inf, -inf, -inf, -inf]
 # [0, 1, 4, -inf, -inf, -inf]
