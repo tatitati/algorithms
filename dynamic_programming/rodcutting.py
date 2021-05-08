@@ -34,7 +34,7 @@ INF = float("inf");
 r = [0] + [-INF]*5
 
 def top_down_rod(prices, n):
-  if(r[n] >= 0):return r[n]
+  if(r[n] >= 0): return r[n]
 
   maxVal = -INF
   for i in range(1, n+1):
