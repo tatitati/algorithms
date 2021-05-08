@@ -10,13 +10,16 @@ graph = {
     'F': []
 }
 
+
 def bfs_iterative(graph, start):
-    visited, queue = [], [start]
-    while queue:
-        vertex = queue.pop(0)
-        if vertex not in visited:
-            visited.append(vertex)
-            queue = queue + graph[vertex]
+    queue = [start]
+    visited = []
+    while queue != []:
+        y = queue.pop(0)
+        for x in graph[y]:
+            if x not in visited and x not in queue: queue.append(x)             
+
+        visited.append(y)
     return visited
 
 
