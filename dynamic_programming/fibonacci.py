@@ -7,10 +7,10 @@ def fib(n):
         else:
             fibs.insert(i, fibs[i-1] + fibs[i-2])
 
-    print(fibs) # [0, 1, 1, 2, 3]
+    print(fibs) # [0, 1, 1, 2, 3, 5, 8]
     return fibs.pop() # last item
 
-print(fib(4)) # 3
+print(fib(6)) # 8
 
 
 # TOP-BOTTOM (memoization)
@@ -21,7 +21,6 @@ def fib(n):
         acc.insert(n, n)
     else:
         acc.insert(n, fib(n-2) + fib(n-1))
-
     return acc[n]
 
-print(fib(4)) # 3
+print(fib(6)) # 8
