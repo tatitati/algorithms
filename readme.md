@@ -48,7 +48,7 @@
 ## Graphs
 ### Traverse
 - [X] Breath First Search (queue, iterative)
-- [X] Breath First Search (queue, recursive)
+- [ ] Breath First Search (queue, recursive)
 - [X] Depth First Search  (stack, iterative)
 - [X] Depth First Search  (stack, recursive)
 
