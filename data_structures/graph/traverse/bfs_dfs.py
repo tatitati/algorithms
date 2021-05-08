@@ -1,3 +1,4 @@
+import time
 # BFS builds a tree from the graph as it traverse the graph
 
 # adjacency matrix
@@ -27,17 +28,30 @@ print("BFS iterative")
 print(bfs_iterative(graph, 'A')) # ['A', 'B', 'C', 'D', 'E', 'F']
 
 
-# def dfs_iterative(graph, start):
-#     visited, stack = [], [start]
-#     while stack:
-#         vertex = stack.pop()
-#         if vertex not in visited:
-#             visited.append(vertex)
-#             stack = stack + graph[vertex]
-#     return visited
+# def bfs_iterative(graph, start):
 
-# print("DFS iterative")
-# print(dfs_iterative(graph, 'A')) # A C F E B D
+
+# print("BFS iterative")
+# print(bfs_recursive(graph, 'A')) # ['A', 'B', 'C', 'D', 'E', 'F']
+
+
+def dfs_iterative(graph, start):
+    stack = [start]
+    visited = []
+    while stack != []:
+        visiting = stack.pop()
+        for nxt in graph[visiting]:
+            if nxt not in visited: 
+                stack.append(nxt)
+        
+        visited.append(visiting)        
+    return visited
+
+
+print("DFS iterative")
+print(dfs_iterative(graph, 'A')) # ['A', 'D', 'C', 'F', 'B', 'E']
+
+
 
 
 # def dfs_recursive(graph, start, visited=[]):
@@ -48,3 +62,17 @@ print(bfs_iterative(graph, 'A')) # ['A', 'B', 'C', 'D', 'E', 'F']
 
 # print("DFS recursive")
 # print(dfs_recursive(graph, 'A')) # A B D E F
+
+
+
+
+
+
+
+
+
+def dfs_recursive(graph, start, visited=[]):
+
+
+print("DFS recursive")
+print(dfs_recursive(graph, 'A')) # A B D E F
