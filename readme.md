@@ -73,10 +73,10 @@
  - [x] Count consonants (recursive)
 
 ## Binary Tree
-- [X] Breath First Search (iterative)
-- [X] Breath First Search (recursive)
-- [X] Depth First Search (iterative)
-- [X] Depth First Search (recursive)
+- [X] Breath First Search (queue, iterative)
+- [X] Breath First Search (queue, recursive)
+- [X] Depth First Search  (stack, iterative)
+- [X] Depth First Search  (stack, recursive)
 - [x] Traversal INORDER
 - [x] Traversal PREORDER
 - [x] Traversal POSTORDER
