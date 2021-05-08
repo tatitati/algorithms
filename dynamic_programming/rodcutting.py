@@ -33,19 +33,26 @@ INF = float("inf");
 # TOP-DOWN (memoization)
 r = [0] + [-INF]*5
 
-def top_down_rod(prices, n):
-  if(r[n] >= 0): return r[n]
+def top_down_rod(prices, cutSize):  
+  if(r[cutSize] >= 0): return r[cutSize]
 
   maxVal = -INF
-  for i in range(1, n+1):
+  for i in range(1, cutSize+1):
     maxVal = max(
       maxVal, 
-      prices[i] + top_down_rod(prices, n-i))
+      prices[i] + top_down_rod(prices, cutSize-i))
 
-  r[n] = maxVal
-  return r[n]
+  r[cutSize] = maxVal
+  print(r)
+  return r[cutSize]
 
-print(top_down_rod([0, 1, 4, 3, 7, 1], 4))
+print(top_down_rod([0, 1, 4, 3, 7, 1], 5))
+# [0, 1, -inf, -inf, -inf, -inf]
+# [0, 1, 4, -inf, -inf, -inf]
+# [0, 1, 4, 5, -inf, -inf]
+# [0, 1, 4, 5, 8, -inf]
+# [0, 1, 4, 5, 8, 9]
+# 9
 
 
 
