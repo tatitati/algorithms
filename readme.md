@@ -5,6 +5,7 @@
 - [x] Reverse string
 - [x] factorial
 - [x] counting backward by 2
+- [x] check if number is polyndrome
 - [ ] hanoi tower
 
 ## BackTracking
