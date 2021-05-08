@@ -28,7 +28,8 @@
 - [x] Solve Knapsack
 - [x] Max array sum
 - [ ] coin change
-- [x] rod cut
+- [x] rod cut (Top-DOWN, memoization)
+- [x] rod cut (Bottom-UP, tabulation)
 
 ## Concurrency
 - [ ] ...
