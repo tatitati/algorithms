@@ -4,6 +4,8 @@
 - [x] Fibonacci
 - [x] Reverse string
 - [x] factorial
+- [x] counting backward by 2
+- [ ] hanoi tower
 
 ## BackTracking
 - [x] Solve laberinth
