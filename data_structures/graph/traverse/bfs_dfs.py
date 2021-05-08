@@ -1,4 +1,7 @@
-#     A
+# Think about this like a graph (even if this looks like a tree). 
+# Otherwise BFS might look exactly the same that level order y in trees. 
+#
+#     A 
 # 	  /\
 #    B  C
 #   /   /\

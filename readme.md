@@ -46,6 +46,12 @@
 # DATA STRUCTURES
 
 ## Graphs
+### Traverse
+- [X] Breath First Search (queue, iterative)
+- [X] Breath First Search (queue, recursive)
+- [X] Depth First Search  (stack, iterative)
+- [X] Depth First Search  (stack, recursive)
+
 ### Find shortest path (single source)
 - [X] Dijkstra
 - [X] Bellman Ford
@@ -73,10 +79,6 @@
  - [x] Count consonants (recursive)
 
 ## Binary Tree
-- [X] Breath First Search (queue, iterative)
-- [X] Breath First Search (queue, recursive)
-- [X] Depth First Search  (stack, iterative)
-- [X] Depth First Search  (stack, recursive)
 - [x] Traversal INORDER
 - [x] Traversal PREORDER
 - [x] Traversal POSTORDER
