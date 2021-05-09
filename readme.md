@@ -37,6 +37,7 @@
 - [x] Solve Knapsack
 - [x] Max array sum
 - [ ] coin change
+- [ ] Largest common subsequence
 - [x] rod cut (Top-DOWN, memoization)
 - [x] rod cut (Bottom-UP, tabulation)
 
