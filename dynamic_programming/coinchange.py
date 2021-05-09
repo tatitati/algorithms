@@ -15,7 +15,8 @@ So the output should be 5.
 def coinChange(coins, amount):
 	table = [1] + [0]*amount
   
-	for i in range(len(coins)):
+	
+	for i, _ in enumerate(coins): # for i in range(len(coins)):   ----> trick, these two lines are equivalent, but the enumerate is easier to understand
 		print(table)
 		for j in range(coins[i],amount+1):			
 			table[j] += table[j-coins[i]]
