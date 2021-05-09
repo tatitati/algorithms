@@ -2,6 +2,9 @@
 common pieces of code across all the algorithms in python.
 '''
 
+# print arrays quickly in strings
+print("my car is ",  ["a", "b", "c", "d"], "and is in ", ["a", "b", "c", "d"]) # my car is  ['a', 'b', 'c', 'd'] and is in  ['a', 'b', 'c', 'd']
+
 # infinity
 # ========
 print(float("inf")) # inf
