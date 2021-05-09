@@ -57,7 +57,6 @@ a.append("a")
 a.append("b")
 a.append("c")
 print(a.pop(0)) # a, a now is ["b", "c"]
-print(a)
 
 # stack
 # =====
@@ -66,4 +65,3 @@ a.append("a")
 a.append("b")
 a.append("c")
 print(a.pop()) # c, a now is ['a', 'b']
-print(a)
