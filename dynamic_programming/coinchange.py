@@ -12,16 +12,14 @@ So output should be 4.
 *For N = 10 and S = {2, 5, 3, 6}, there are five solutions: {2,2,2,2,2}, {2,2,3,3}, {2,2,6}, {2,3,5} and {5,5}. 
 So the output should be 5.
 '''
-def coinChange( coins, amount ):
-	Opt = [0 for i in range(0, amount+1)]
-	n = len(coins)
+def coinChange(coins, amountCoins, amount):
+    table = [0 for k in range(amount+1)]
+    table[0] = 1
+  
+    for i in range(0,amountCoins):
+        for j in range(coins[i],amount+1):
+            table[j] += table[j-coins[i]]
+  
+    return table[amount]
 
-	for i in range(1, amount+1):
-		smallest = float("inf")
-		for j in range(0, n):
-			if (coins[j] <= i): 
-				smallest = min(smallest, Opt[i - coins[j]]) 
-		Opt[i] = 1 + smallest 
-	return Opt[amount]
-
-print(coinChange([1, 2, 3],  4))
+print(coinChange([1, 2, 3],  3, 4))
