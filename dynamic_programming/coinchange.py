@@ -23,6 +23,4 @@ def coinChange(coins, amount):
   
 	return table[amount]
 
-for i in range(5):
-	print(i)
 print(coinChange([1, 2, 3],  4))
