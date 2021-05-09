@@ -13,13 +13,15 @@ So output should be 4.
 So the output should be 5.
 '''
 def coinChange(coins, amount):
-    table = [0 for k in range(amount+1)]
-    table[0] = 1
+	table = [0 for k in range(amount+1)]
+	table[0] = 1
   
-    for i in range(0,len(coins)):
-        for j in range(coins[i],amount+1):
-            table[j] += table[j-coins[i]]
+	for i in range(len(coins)):
+		print(table)
+		for j in range(coins[i],amount+1):			
+			table[j] += table[j-coins[i]]
+			print("\t\t %s" % (table))
   
-    return table[amount]
+	return table[amount]
 
 print(coinChange([1, 2, 3],  4))
