@@ -6,6 +6,13 @@ common pieces of code across all the algorithms in python.
 # ========
 print(float("inf")) # inf
 
+# swap values
+# ===========
+a = ["a", "b", "c", "d"]
+a[1], a[2] = a[2], a[1] # ['a', 'c', 'b', 'd']
+print(a)
+
+
 # range
 # =====
 print(list(range(5)))  # [0, 1, 2, 3, 4]
