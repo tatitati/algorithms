@@ -2,8 +2,17 @@
 common pieces of code across all the algorithms in python.
 '''
 
-# print arrays quickly in strings
+# print 
+# =====
+# concat arrays quickly in strings
 print("my car is ",  ["a", "b", "c", "d"], "and is in ", ["a", "b", "c", "d"]) # my car is  ['a', 'b', 'c', 'd'] and is in  ['a', 'b', 'c', 'd']
+
+# increment number
+# ================
+# in python you cannot do a++
+a = 5
+a += 1
+print(a) # 6
 
 # infinity
 # ========
