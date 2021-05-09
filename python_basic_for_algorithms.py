@@ -1,5 +1,5 @@
 '''
-common pieces of code across all the algorithms in python
+common pieces of code across all the algorithms in python.
 '''
 
 # infinity
@@ -37,3 +37,5 @@ print(a[1:-1:2]) # b d
 
 # init matrixes
 # =============
+print([0]*5) 		# [0, 0, 0, 0, 0]
+print([3] + [0]*4)  # [3, 0, 0, 0, 0]
