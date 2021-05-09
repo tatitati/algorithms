@@ -1,3 +1,7 @@
+'''
+Rotate each item of the array as many times as indicated to the left
+'''
+
 def rotLeft(numbers, rotations):
     result = [0]*len(numbers)
     for idx, val in enumerate(numbers):
