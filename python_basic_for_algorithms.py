@@ -49,3 +49,21 @@ print([[ 0 for x in range(3)] for y in range(5)])
 # 	[0, 0, 0], 
 # 	[0, 0, 0]
 # ]
+
+# queue
+# =====
+a = []
+a.append("a")
+a.append("b")
+a.append("c")
+print(a.pop(0)) # a, a now is ["b", "c"]
+print(a)
+
+# stack
+# =====
+a = []
+a.append("a")
+a.append("b")
+a.append("c")
+print(a.pop()) # c, a now is ['a', 'b']
+print(a)
