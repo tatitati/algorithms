@@ -3,10 +3,15 @@ def bribe(q):
 	bribe = 0
 	memoBribers = [0]*len(q)
 	for idx, val in enumerate(q):				
+		if val == (idx + 1): continue
 		if val - (idx+1) > 2:
 			print("Too chaotic")
 			return
-		
+			
+		if j > val:
+			return bribe += 1 
+
+		bribe += bribe(q[:idx])		
 		for j in q[:idx]:
 			if j > val:
 				bribe += 1 
