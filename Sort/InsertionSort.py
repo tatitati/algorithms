@@ -17,4 +17,4 @@ def insertion_sort(nums):
 
     return nums
 
-print(insertion_sort([4, 22, 41, 40, 27, 30, 36]))
+print(insertion_sort([4, 22, 41, 40, 27, 30, 36])) # [4, 22, 27, 30, 36, 40, 41]
