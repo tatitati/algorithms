@@ -6,14 +6,15 @@ the list is reached.
 """
 
 def insertion_sort(nums):
-    for i, value in enumerate(nums):
-        if(i > 0 and nums[i-1] > value): # needed back-swap
+    for i, val in enumerate(nums):
+        if i == 0: continue
+        if nums[i-1] > nums[i]:        
             for j in reversed(range(i)):
-                if nums[j] > value:
-                    nums[j], nums[j+1] = nums[j+1], nums[j] # swap
+                try: # in this way I don't need to check if is the last iteration or the index doesnt exist                                            
+                    if nums[j] > nums[j+1]: nums[j+1], nums[j] = nums[j], nums[j+1] # swap
+                finally:
+                    continue
 
     return nums
 
-
-array = [4, 22, 41, 40, 27, 30, 36]
-print(insertion_sort(array)) # [4, 22, 27, 30, 36, 40, 41]
+print(insertion_sort([4, 22, 41, 40, 27, 30, 36]))

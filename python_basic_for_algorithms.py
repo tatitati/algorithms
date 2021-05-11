@@ -30,6 +30,7 @@ print(a)
 # =====
 print(list(range(5)))  	  # [0, 1, 2, 3, 4]
 print(list(range(1, 5)))  # [1, 2, 3, 4]
+print(list(reversed(range(1, 5))))  # [4, 3, 2, 1]
 
 
 # for + len + range VS for + enumerate
