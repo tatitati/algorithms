@@ -8,3 +8,19 @@ K = 7
 The budget is 7 units of currency. 
 He can buy items that cost [1, 2, 3] for 6, or [3, 4] for 7 units. The maximum is 3 items. 
 '''
+
+def maximumToys(prices, budget):
+    prices.sort()
+    toys = 0
+    spent = 0
+    for i, price in enumerate(prices):
+        if price<budget and spent + price < budget: 
+            toys += 1
+            spent += price
+        else:
+            return toys
+
+
+
+print(maximumToys([3, 7, 2, 9, 4], 7)) # [3,1,4,2] == $6
+# print(maximumToys([3,1,4,2], 7)) # [3,1,4,2] == $6

@@ -3,16 +3,18 @@
 # This algorithm is not suitable for large data sets as its average and worst case
 # complexity are of Ο(n2) where n is the number of items.
 
-def bubbleSort(nums):
-    madeChanges = None
-    while(madeChanges != False):
-        madeChanges = False
 
-        for idx, num in enumerate(nums):
-            if idx == len(nums)-1: continue
-            elif nums[idx] > nums[idx+1]:
-                nums[idx], nums[idx+1] = nums[idx+1], nums[idx] # swap
-                madeChanges = True
+def bubbleSort(nums):
+    done = False
+    while(done == False):
+        done = True
+        for i, val in enumerate(nums):
+            if i == 0: continue
+            if nums[i-1] > nums[i]: 
+                nums[i], nums[i-1] = nums[i-1], nums[i]
+                done = False
+                continue            
+
     return nums
 
 
