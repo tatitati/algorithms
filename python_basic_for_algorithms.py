@@ -24,6 +24,13 @@ a = ["a", "b", "c", "d"]
 a[1], a[2] = a[2], a[1] # ['a', 'c', 'b', 'd']
 print(a)
 
+# sort()
+# sort update the original array, it return always None
+# =====
+a = [8, 5, 6, 2, 4, 1]
+a.sort()
+print(a) # [1, 2, 4, 5, 6, 8] 
+
 
 # range
 # You cannot create a reverted range: range(5, 1), wrong
