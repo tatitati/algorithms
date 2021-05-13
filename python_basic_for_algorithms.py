@@ -31,6 +31,12 @@ a = [8, 5, 6, 2, 4, 1]
 a.sort()
 print(a) # [1, 2, 4, 5, 6, 8] 
 
+# how can we map() in an array?
+# =============================
+a = [8, 5, 6, 2, 4, 1]
+arr = [x-1 for x in a]
+print(arr) # [7, 4, 5, 1, 3, 0]
+
 
 # range
 # You cannot create a reverted range: range(5, 1), wrong
