@@ -24,12 +24,16 @@ a = ["a", "b", "c", "d"]
 a[1], a[2] = a[2], a[1] # ['a', 'c', 'b', 'd']
 print(a)
 
-# sort()
-# sort update the original array, it return always None
-# =====
+# sort() vs sorted()
+# ==================
+# sort() update the original array, it return always None
 a = [8, 5, 6, 2, 4, 1]
 a.sort()
 print(a) # [1, 2, 4, 5, 6, 8] 
+# sorted() instead return a new one sorted
+b = [8, 5, 6, 2, 4, 1]
+print(sorted(b)) # [1, 2, 4, 5, 6, 8]
+print(b) # [8, 5, 6, 2, 4, 1]
 
 # how can we map() in an array?
 # =============================
