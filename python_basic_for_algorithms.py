@@ -74,6 +74,8 @@ print(a[1:-1]) # b c d
 # between jumping...
 print(a[1:-1:2]) # b d
 
+print(a[-3]) # c
+
 
 # init matrixes
 # =============
@@ -96,7 +98,7 @@ a = []
 a.append("a")
 a.append("b")
 a.append("c")
-print(a.pop(0)) # a, a now is ["b", "c"]
+print(a.pop(0)) # a, a == ["b", "c"]
 
 # stack
 # =====
@@ -104,4 +106,4 @@ a = []
 a.append("a")
 a.append("b")
 a.append("c")
-print(a.pop()) # c, a now is ['a', 'b']
+print(a.pop()) # c, a == ['a', 'b']
