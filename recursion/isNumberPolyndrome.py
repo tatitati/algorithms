@@ -1,3 +1,4 @@
+# https://www.geeksforgeeks.org/check-if-a-number-is-palindrome/
 
 def isNumberPolindrome(num):
     if len(num) == 2: return num[0] == num[len(num)-1]
