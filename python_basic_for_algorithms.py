@@ -64,9 +64,11 @@ for idx, _ in enumerate(["a", "b", "c", "d", "e"]):
 a = ["a", "b", "c", "d", "e"]
 # ending at...
 print(a[:0]) # []
-print(a[1:]) # ["b", "c", "d", "e"]
 print(a[:1]) # a
+
+print(a[1:]) # ["b", "c", "d", "e"]
 print(a[:-1]) # ['a', 'b', 'c', 'd']
+
 # starting at...
 print(a[2:]) # c d e
 # between, slice...
