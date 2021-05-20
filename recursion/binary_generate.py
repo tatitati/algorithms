@@ -2,6 +2,7 @@
 
 def digits(k, previous):
 	binary = [[0] * k]
+	
 
 
 

@@ -1,13 +1,13 @@
 # https://www.geeksforgeeks.org/recursive-solution-count-substrings-first-last-characters/
 
 def recursiveSearch(text, searchLetter):	
-	resultIteration = 1 if text[0] == searchLetter else 0	
+	resultCurrentIteration = 1 if text[0] == searchLetter else 0	
 
 	# base case
 	if len(text) == 1:
-		return resultIteration
+		return resultCurrentIteration
 	
-	return resultIteration + recursiveSearch(text[1:], searchLetter)
+	return resultCurrentIteration + recursiveSearch(text[1:], searchLetter)
 
 
 def main(text):
