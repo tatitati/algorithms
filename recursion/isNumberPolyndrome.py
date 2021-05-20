@@ -5,7 +5,6 @@ def isNumberPolindrome(num):
 
     # base case
     if len(num) == 2: return resultCurrentIteration
-
     return resultCurrentIteration and isNumberPolindrome(num[1:-1])    
 
 
