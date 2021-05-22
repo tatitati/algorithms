@@ -32,7 +32,6 @@ def solve(maze, start, goal, position):
 		return False
 
 	# next step:
-
 	print("\nright?")
 	time.sleep(1)
 	if currentSolutionPath[position[0]][position[1]+1] == 1 or solve(maze, start, goal, [position[0], position[1]+1]) == False: 	# try right
