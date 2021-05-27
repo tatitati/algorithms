@@ -110,3 +110,10 @@ a.append("a")
 a.append("b")
 a.append("c")
 print(a.pop()) # c, a == ['a', 'b']
+
+
+# filter a list of items
+# =====================
+names=["ismail","ali","ahmet","elif","ecrin"]
+filtered_names = filter(lambda item: 'i' in item , names)
+print(filered_names) # ["ali", "elif", "ecrin"]
