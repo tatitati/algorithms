@@ -78,6 +78,9 @@ print(a[1:-1]) # b c d
 print(a[1:-1:2]) # b d
 
 print(a[-3]) # c
+# invert an array
+print(a[::-1]) # ['e', 'd', 'c', 'b', 'a']
+
 
 
 # init matrixes
