@@ -110,3 +110,8 @@ a.append("a")
 a.append("b")
 a.append("c")
 print(a.pop()) # c, a == ['a', 'b']
+
+# round numbers
+import math
+print(7/2) # 3.5
+print(math.ceil(7/2)) # 4
