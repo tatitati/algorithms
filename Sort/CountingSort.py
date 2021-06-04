@@ -1,3 +1,5 @@
+# Explanation: https://www.programiz.com/dsa/counting-sort
+
 def countingSort(arr):
 	count = [0]*(max(arr)+1)
 	acc = [0]*(max(arr)+1)
