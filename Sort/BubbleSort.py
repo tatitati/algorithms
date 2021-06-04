@@ -19,7 +19,10 @@ def bubbleSort1(nums):
 
 print(bubbleSort1([64, 34, 25, 12, 22, 11, 90])) # [11, 12, 22, 25, 34, 64, 90]
 
-
+# COMPLEXITY:
+# - average case: O(n^2)
+# - best case (already sorted): O(n^2)
+# - worst case (reversed sorted): O(n^2)
 
 
 def bubbleSort2(nums):
