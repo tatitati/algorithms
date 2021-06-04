@@ -6,7 +6,7 @@ the list is reached.
 """
 
 def insertion_sort(nums):
-    for i, val in enumerate(nums):
+    for i, _ in enumerate(nums):
         if i == 0: continue
         if nums[i-1] > nums[i]:        
             for j in reversed(range(i)):
