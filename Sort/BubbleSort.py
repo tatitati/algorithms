@@ -4,7 +4,7 @@
 # complexity are of Ο(n2) where n is the number of items.
 
 
-def bubbleSort(nums):
+def bubbleSort1(nums):
     done = False
     while(done == False):
         done = True
@@ -17,7 +17,16 @@ def bubbleSort(nums):
 
     return nums
 
+print(bubbleSort1([64, 34, 25, 12, 22, 11, 90])) # [11, 12, 22, 25, 34, 64, 90]
 
-nums = [64, 34, 25, 12, 22, 11, 90]
 
-print(bubbleSort(nums)) # [11, 12, 22, 25, 34, 64, 90]
+
+
+def bubbleSort2(nums):
+    for i, _ in enumerate(nums):
+        for j, _ in enumerate(nums[:-1]):            
+            if nums[j] > nums[j+1]: nums[j], nums[j+1] = nums[j+1], nums[j]
+
+    return nums
+
+print(bubbleSort2([64, 34, 25, 12, 22, 11, 90])) # [11, 12, 22, 25, 34, 64, 90]
