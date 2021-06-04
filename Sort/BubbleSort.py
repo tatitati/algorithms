@@ -8,7 +8,7 @@ def bubbleSort(nums):
     done = False
     while(done == False):
         done = True
-        for i, val in enumerate(nums):
+        for i, _ in enumerate(nums):
             if i == 0: continue
             if nums[i-1] > nums[i]: 
                 nums[i], nums[i-1] = nums[i-1], nums[i]
