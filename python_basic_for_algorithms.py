@@ -119,9 +119,38 @@ print(a.pop()) # c, a == ['a', 'b']
 # =====================
 names=["ismail","ali","ahmet","elif","ecrin"]
 filtered_names = filter(lambda item: 'i' in item , names)
-print(filered_names) # ["ali", "elif", "ecrin"]
+print(filtered_names) # ["ali", "elif", "ecrin"]
 
 # round numbers
 import math
 print(7/2) # 3.5
 print(math.ceil(7/2)) # 4
+
+# a classic configuration of "for loops" to investigate backward elements:
+nums = [3, 2, 8, 9, 10]
+for i, _ in enumerate([3, 2, 8, 9, 10]):
+	print("---")
+	print(nums[:i])
+	for j, val in enumerate(nums[:i]):   
+		print(val)
+# output:
+# ---
+# []
+# ---
+# [3]
+# 3
+# ---
+# [3, 2]
+# 3
+# 2
+# ---
+# [3, 2, 8]
+# 3
+# 2
+# 8
+# ---
+# [3, 2, 8, 9]
+# 3
+# 2
+# 8
+# 9
