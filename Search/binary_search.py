@@ -1,3 +1,7 @@
+# COMPLEXITY
+# ==========
+# log2(n)
+
 def binary_search_iterative(arr, x):
     low = 0 # low idx
     high = len(arr) - 1 # high idx
