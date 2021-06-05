@@ -5,10 +5,11 @@ def binary_search_iterative(arr, x):
 
     while low <= high:
         mid = (high + low) // 2
-
+        
+        if arr[mid] == x: return mid # base condition
         if arr[mid] < x: low = mid + 1
         elif arr[mid] > x: high = mid - 1
-        else: return mid
+        
 
     return -1
 
@@ -16,7 +17,7 @@ def binary_search_recursive(arr, low, high, x):
     if high >= low:
         mid = (high + low) // 2
 
-        if arr[mid] == x: return mid
+        if arr[mid] == x: return mid # base condition
         elif arr[mid] > x: return binary_search_recursive(arr, low, mid - 1, x)
         else: return binary_search_recursive(arr, mid + 1, high, x)
 
