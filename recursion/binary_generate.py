@@ -1,4 +1,7 @@
 # https://www.geeksforgeeks.org/generate-binary-strings-without-consecutive-1s/
+# TODO
+
+
 
 def digits(k, previous):
 	binary = [[0] * k]
