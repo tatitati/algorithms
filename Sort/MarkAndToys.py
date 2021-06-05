@@ -13,7 +13,7 @@ def maximumToys(prices, budget):
     prices.sort()
     toys = 0
     spent = 0
-    for i, price in enumerate(prices):
+    for price in prices:
         if price<budget and spent + price < budget: 
             toys += 1
             spent += price
