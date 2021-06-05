@@ -1,6 +1,6 @@
 
 # Complexity
-# ===========
+# ==========
 # Average case time complexity: O(N)
 # Best case (you find it at the start) time complexity: O(1)
 # Worst case (you find it at the end) time complexity: O(N)
