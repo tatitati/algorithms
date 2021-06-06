@@ -9,8 +9,14 @@
 import math
 
 # COMPLEXITY:
+# ==========
 # Algorithmic Paradigm: Divide and Conquer
 # θ(nLogn) in all 3 cases (worst, average and best) as merge sort always divides the array into two halves and takes linear time to merge two halves.
+
+# Notes:
+# ======
+# Merge sort algorithm requires an additional memory space of 0(n) for the temporary array.
+# It goes through the whole process even if the array is sorted.
 
 # Is useful to learn an algorith to sort two arrays. 
 # Once you know how to do this, you just need to split the arrays and sort them with this function. 
