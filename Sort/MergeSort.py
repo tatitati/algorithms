@@ -12,7 +12,7 @@ import math
 # Algorithmic Paradigm: Divide and Conquer
 # θ(nLogn) in all 3 cases (worst, average and best) as merge sort always divides the array into two halves and takes linear time to merge two halves.
 
-# Is useful to learn an algorith to sorto two arrays. 
+# Is useful to learn an algorith to sort two arrays. 
 # Once you know how to do this, you just need to split the arrays and sort them with this function. 
 # The learning process is much softer in this way
 def merge(left, right):
