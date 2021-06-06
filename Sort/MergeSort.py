@@ -8,6 +8,10 @@
 
 import math
 
+# COMPLEXITY:
+# Algorithmic Paradigm: Divide and Conquer
+# 
+
 # Is useful to learn an algorith to sorto two arrays. 
 # Once you know how to do this, you just need to split the arrays and sort them with this function. 
 # The learning process is much softer in this way

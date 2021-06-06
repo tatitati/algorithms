@@ -4,21 +4,6 @@
 # complexity are of Ο(n2) where n is the number of items.
 
 
-def bubbleSort1(nums):
-    done = False
-    while(done == False):
-        done = True
-        for i, _ in enumerate(nums):
-            if i == 0: continue
-            if nums[i-1] > nums[i]: 
-                nums[i], nums[i-1] = nums[i-1], nums[i]
-                done = False
-                continue            
-
-    return nums
-
-print(bubbleSort1([64, 34, 25, 12, 22, 11, 90])) # [11, 12, 22, 25, 34, 64, 90]
-
 # COMPLEXITY:
 # - average case: O(n^2)
 # - best case (already sorted): O(n^2)

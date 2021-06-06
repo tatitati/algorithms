@@ -1,5 +1,6 @@
 # COMPLEXITY
 # ==========
+# Algorithmic Paradigm: Divide and Conquer
 # log2(n)
 
 def binary_search_iterative(arr, x):
