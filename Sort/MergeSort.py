@@ -21,7 +21,7 @@ import math
 # Is useful to learn an algorith to sort two arrays. 
 # Once you know how to do this, you just need to split the arrays and sort them with this function. 
 # The learning process is much softer in this way
-def merge(left, right):
+def mergeAndSort(left, right):
     a = len(left) - 1
     b = len(right) - 1
     result = [0]*(len(left) + len(right))
@@ -43,12 +43,12 @@ def merge(left, right):
 
     return result
 
-print(merge([5, 7, 10], [3, 6]))
+print(mergeAndSort([5, 7, 10], [3, 6]))
 
 
 
 
-def mergeSort(arr):     
+def split(arr):     
     # divide and sort
 
     if len(arr) == 1:
@@ -62,9 +62,9 @@ def mergeSort(arr):
     left = arr[:middle]
     right = arr[middle:]
     
-    left = mergeSort(left)
-    right = mergeSort(right)
+    left = split(left)
+    right = split(right)
 
-    return merge(left, right)
+    return mergeAndSort(left, right)
 
-print(mergeSort([6, 5, 12, 10, 9, 1, 14 ])) # [1, 5, 6, 9, 10, 12, 14]
+print(split([6, 5, 12, 10, 9, 1, 14 ])) # [1, 5, 6, 9, 10, 12, 14]
