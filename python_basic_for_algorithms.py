@@ -2,7 +2,7 @@
 common pieces of code across all the algorithms in python.
 '''
 
-# print 
+# print
 # =====
 # concat arrays quickly in strings
 print("my car is ",  ["a", "b", "c", "d"], "and is in ", ["a", "b", "c", "d"]) # my car is  ['a', 'b', 'c', 'd'] and is in  ['a', 'b', 'c', 'd']
@@ -29,7 +29,7 @@ print(a)
 # sort() update the original array, it return always None
 a = [8, 5, 6, 2, 4, 1]
 a.sort()
-print(a) # [1, 2, 4, 5, 6, 8] 
+print(a) # [1, 2, 4, 5, 6, 8]
 # sorted() instead return a new one sorted
 b = [8, 5, 6, 2, 4, 1]
 print(sorted(b)) # [1, 2, 4, 5, 6, 8]
@@ -40,6 +40,9 @@ print(b) # [8, 5, 6, 2, 4, 1]
 a = [8, 5, 6, 2, 4, 1]
 arr = [x-1 for x in a]
 print(arr) # [7, 4, 5, 1, 3, 0]
+
+b = map(lambda x: x+1, a)
+print(list(b)) # [9, 6, 7, 3, 5, 2]
 
 
 # range
@@ -54,10 +57,10 @@ print(list(reversed(range(1, 5))))  # [4, 3, 2, 1]
 # ====================================
 # you will see this loop a lot. Trick: is much easier to read in the second way (with enumerate)
 for idx in range(len(["a", "b", "c", "d", "e"])):
-	print(idx) # 0 1 2 3 4 
+	print(idx) # 0 1 2 3 4
 
 for idx, _ in enumerate(["a", "b", "c", "d", "e"]):
-	print(idx) # 0 1 2 3 4 
+	print(idx) # 0 1 2 3 4
 
 # array slices
 # ============
@@ -89,12 +92,12 @@ print([0]*5) 		# [0, 0, 0, 0, 0]
 print([3] + [0]*4)  # [3, 0, 0, 0, 0]
 
 print([ 0 for j in range(5)]) # [0, 0, 0, 0, 0]
-print([[ 0 for x in range(3)] for y in range(5)]) 
+print([[ 0 for x in range(3)] for y in range(5)])
 # [
-# 	[0, 0, 0], 
-# 	[0, 0, 0], 
-# 	[0, 0, 0], 
-# 	[0, 0, 0], 
+# 	[0, 0, 0],
+# 	[0, 0, 0],
+# 	[0, 0, 0],
+# 	[0, 0, 0],
 # 	[0, 0, 0]
 # ]
 
@@ -131,7 +134,7 @@ nums = [3, 2, 8, 9, 10]
 for i, _ in enumerate([3, 2, 8, 9, 10]):
 	print("---")
 	print(nums[:i])
-	for j, val in enumerate(nums[:i]):   
+	for j, val in enumerate(nums[:i]):
 		print(val)
 # output:
 # ---
