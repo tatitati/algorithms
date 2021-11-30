@@ -55,7 +55,7 @@ print(list(reversed(range(1, 5))))  # [4, 3, 2, 1]
 
 # for + len + range VS for + enumerate
 # ====================================
-myrange = range(4)
+myrange = range(4)   # -> range never includes the number you pass in the returned list and it starts on zero!!
 print(myrange) # [0, 1, 2, 3]
 
 myrange = range(3,6)
