@@ -55,6 +55,12 @@ print(list(reversed(range(1, 5))))  # [4, 3, 2, 1]
 
 # for + len + range VS for + enumerate
 # ====================================
+myrange = range(4)
+print(myrange) # [0, 1, 2, 3]
+
+myrange = range(3,6)
+print(myrange) # [3, 4, 5]
+
 # you will see this loop a lot. Trick: is much easier to read in the second way (with enumerate)
 for idx in range(len(["a", "b", "c", "d", "e"])):
 	print(idx) # 0 1 2 3 4
@@ -65,18 +71,19 @@ for idx, _ in enumerate(["a", "b", "c", "d", "e"]):
 # array slices
 # ============
 a = ["a", "b", "c", "d", "e"]
-# ending at...
+# ending at (and not including)...
 print(a[:0]) # []
 print(a[:1]) # a
-
-print(a[1:]) # ["b", "c", "d", "e"]
 print(a[:-1]) # ['a', 'b', 'c', 'd']
 
-# starting at...
+# starting at (and not including)...
+print(a[1:]) # ["b", "c", "d", "e"]
 print(a[2:]) # c d e
+
 # between, slice...
-print(a[1:3]) # b c
+print(a[1:3]) # b cs
 print(a[1:-1]) # b c d
+
 # between jumping...
 print(a[1:-1:2]) # b d
 
