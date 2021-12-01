@@ -75,7 +75,7 @@ a = ["a", "b", "c", "d", "e"]
 print(a[:0]) # []
 print(a[:1]) # a
 print(a[:3]) # ['a', 'b', 'c']
-print(a[:-1]) # ['a', 'b', 'c', 'd']
+print(a[:-1]) # ['a', 'b', 'c', 'd']  # this and the next are the same
 print(a[0:-1]) # ['a', 'b', 'c', 'd']
 
 # starting at (and not including)...
