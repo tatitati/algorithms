@@ -76,12 +76,15 @@ print(a[:0]) # []
 print(a[:1]) # a
 print(a[:3]) # ['a', 'b', 'c']
 print(a[:-1]) # ['a', 'b', 'c', 'd']
+print(a[0:-1]) # ['a', 'b', 'c', 'd']
 
 # starting at (and not including)...
+print(a[0:]) # ["a", "b", "c", "d", "e"]
 print(a[1:]) # ["b", "c", "d", "e"]
 print(a[2:]) # c d e
 
 # between, slice...
+print(a[0:0]) # []
 print(a[1:3]) # b cs
 print(a[1:-1]) # b c d
 
