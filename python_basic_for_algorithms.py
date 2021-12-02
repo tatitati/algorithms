@@ -127,7 +127,8 @@ a = []
 a.append("a")
 a.append("b")
 a.append("c")
-print(a.pop()) # c, a == ['a', 'b']
+print(a.pop()) # c
+print(a) # ['a', 'b']
 
 
 # filter a list of items
