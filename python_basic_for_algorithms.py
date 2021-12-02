@@ -147,8 +147,9 @@ print(math.ceil(7/2)) # 4
 b = ["a", "b", "c"]
 idx = b.index("b") # 1
 b.pop(idx) # b
+print(b) # [a, c]
 b.insert(0, "b")
-print(b) # [b, a, b]
+print(b) # [b, a, c]
 
 # reverse string or list
 a="abcdef"
