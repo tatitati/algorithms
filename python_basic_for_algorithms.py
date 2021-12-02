@@ -143,6 +143,13 @@ import math
 print(7/2) # 3.5
 print(math.ceil(7/2)) # 4
 
+# move items in a list
+b = ["a", "b", "c"]
+idx = b.index("b") # 1
+b.pop(idx) # b
+b.insert(0, "b")
+print(b) # [b, a, b]
+
 # a classic configuration of "for loops" to investigate backward elements:
 nums = [3, 2, 8, 9, 10]
 for i, _ in enumerate([3, 2, 8, 9, 10]):
