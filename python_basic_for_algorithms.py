@@ -85,6 +85,7 @@ print(a[2:]) # c d e
 
 # between, slice...
 print(a[0:0]) # []
+print(a[0:-0]) # []
 print(a[1:3]) # b cs
 print(a[1:-1]) # b c d
 
