@@ -150,6 +150,15 @@ b.pop(idx) # b
 b.insert(0, "b")
 print(b) # [b, a, b]
 
+# reverse string or list
+a="abcdef"
+print(a[::-1]) #'fedcba'
+b = ["a", "b", "c"]
+print(b[::-1]) # ['c', 'b', 'a']
+
+
+
+
 # a classic configuration of "for loops" to investigate backward elements:
 nums = [3, 2, 8, 9, 10]
 for i, _ in enumerate([3, 2, 8, 9, 10]):
