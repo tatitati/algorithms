@@ -71,6 +71,7 @@ for idx, _ in enumerate(["a", "b", "c", "d", "e"]):
 # array slices
 # ============
 a = ["a", "b", "c", "d", "e"]
+print(a[-1]) # e
 # ending at (and not including)...
 print(a[:0]) # []
 print(a[:1]) # a
