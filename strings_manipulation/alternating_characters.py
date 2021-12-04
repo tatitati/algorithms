@@ -13,6 +13,6 @@ def alternatingCharacters(text):
 
 	return deletions
 
-print(alternatingCharacters("AAAA"))
+print(alternatingCharacters("AAAA")) # 3
 
 
