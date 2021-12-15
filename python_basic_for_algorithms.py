@@ -138,6 +138,14 @@ names=["ismail","ali","ahmet","elif","ecrin"]
 filtered_names = filter(lambda item: 'i' in item , names)
 print(filtered_names) # ["ali", "elif", "ecrin"]
 
+# custom sort of a list
+def multi(num):
+     return num*2
+
+a=[1,4,70,2,9,6]
+a.sort(key=multi)
+print(a) #[1, 2, 4, 6, 9, 70]
+
 # round numbers
 import math
 print(7/2) # 3.5
